@@ -2,7 +2,10 @@ document.getElementById('goToPage2')?.addEventListener('click', () => {
     window.location.href = 'netunim.html';
 });
 
-
+document.getElementById('goToPage1')?.addEventListener('click', () => {
+    
+    window.location.href = 'index.html';
+});
 
 document.getElementById('mybutton').addEventListener('click', () => {
     let kupaID = parseInt(document.getElementsByName("txt1")[0]?.value);
@@ -59,31 +62,4 @@ document.getElementById('mybutton').addEventListener('click', () => {
             document.getElementById('ahuz7').textContent = (Number(fields[44] || 0) * 100).toLocaleString() + '%';
         })
         .catch(error => console.error('Error fetching the file:', error));
-}); 
-
-document.getElementById('goToPage1')?.addEventListener('click', () => {
- /*  const maslulSelect = document.getElementById('maslul-type');
-    
-    // Clear the current options
-    maslulSelect.innerHTML = ''; 
-    
-    // Define new options (you can customize them)
-    const newOptions = [
-        { value: 'option1', text: 'New Option 1' },
-        { value: 'option2', text: 'New Option 2' },
-        { value: 'option3', text: 'New Option 3' }
-    ];
-
-    // Add new options
-    newOptions.forEach(optionData => {
-        const option = document.createElement('option');
-        option.value = optionData.value;
-        option.textContent = optionData.text;
-        maslulSelect.appendChild(option);
-    }); */
-   
-    window.location.href = 'index.html';
-});
-
-
-
+});    
