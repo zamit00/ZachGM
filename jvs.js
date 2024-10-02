@@ -62,7 +62,7 @@ document.getElementById('mybutton').addEventListener('click', () => {
 }); 
 
 document.getElementById('goToPage1')?.addEventListener('click', () => {
-   const maslulSelect = document.getElementById('maslul-type');
+ /*  const maslulSelect = document.getElementById('maslul-type');
     
     // Clear the current options
     maslulSelect.innerHTML = ''; 
@@ -80,8 +80,8 @@ document.getElementById('goToPage1')?.addEventListener('click', () => {
         option.value = optionData.value;
         option.textContent = optionData.text;
         maslulSelect.appendChild(option);
-    });
-    return;
+    }); */
+   
     window.location.href = 'index.html';
 });
 
