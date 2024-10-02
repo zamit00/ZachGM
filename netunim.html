@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="heb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page 2</title>
     <script src="jvs.js" defer></script>
 </head>
-<body>
+<body dir="rtl">
     <button id="goToPage1">Go to Page 1</button>
+        <div class="muzar">
+            <label for="product">בחר מוצר:</label>
+            <select id="product" name="product" required>
+                <option value=""></option>
+                <option value="קרנות השתלמות">קרן השתלמות</option>
+                <option value="תגמולים ואישית לפיצויים">קופת גמל</option>
+                <option value="קופת גמל להשקעה">קופת גמל להשקעה</option>
+                <option value="קופת גמל להשקעה - חסכון לילד">קופת חסכון לילד</option>
+                <option value="קופה מרכזית לפיצויים">מרכזית לפיצויים</option>
+            </select>
+        </div>
+
+        <div class="muzar">
+            <label for="management-type">בחר סוג ניהול:</label>
+            <select id="management-type" name="management-type" required>
+                <option value="ללא העדפה">ללא העדפה</option>
+                <option value="אקטיבי">אקטיבי</option>
+                <option value="פאסיבי">פאסיבי</option>
+            </select>
+        </div>
+
+        <div class="muzar">
+            <label for="management-type">בחר מסלול:</label>
+            <select id="maslul-type" name="management-type" required>
+                <option value="ללא העדפה" id="option-type">ללא העדפה</option>
+            </select>
+        </div>
+
+
+    
 </body>
 </html>
