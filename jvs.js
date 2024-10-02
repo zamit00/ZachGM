@@ -6,4 +6,59 @@ document.getElementById('goToPage1')?.addEventListener('click', () => {
     window.location.href = 'index.html';
 });
 
-    
+document.getElementById('mybutton').addEventListener('click', () => {
+    let kupaID = parseInt(document.getElementsByName("txt1")[0]?.value);
+
+    // ניקוי פלטים קודמים
+    for (let i = 1; i <= 10; i++) {
+        document.getElementById(`output${i}`).textContent = '';
+        if (i <= 7) {
+            document.getElementById(`schom${i}`).textContent = '';
+            document.getElementById(`ahuz${i}`).textContent = '';
+        }
+    }
+// קורא נתונים מקובץ דאטה
+    fetch('data.txt')
+        .then(response => response.text())
+        .then(data => {
+            const startIndex = data.indexOf(`<kupa${kupaID}>`);
+
+            if (startIndex === -1) return;
+
+            let splitContent = data.substring(startIndex); 
+            const endString = splitContent.indexOf("</Row>");
+            let allString = endString !== -1 ? splitContent.substring(0, endString + 6) : '';
+
+            console.log(allString);
+
+            let fields = allString.split(',');
+// ממלא שדות נתונים בטבלאות
+            document.getElementById('output1').textContent = kupaID;
+            document.getElementById('output2').textContent = fields[1] || '';
+            document.getElementById('output3').textContent = fields[2] || '';
+            document.getElementById('output4').textContent = fields[3] || '';
+            document.getElementById('output5').textContent = fields[4] || '';
+            document.getElementById('output6').textContent = Number(fields[5] || 0).toLocaleString() + " מלשח";
+            document.getElementById('output7').textContent = ((fields[6] * 100 || 0)).toFixed(2) + '%';
+            document.getElementById('output8').textContent = ((fields[7] * 100 || 0)).toFixed(2) + '%';
+            document.getElementById('output9').textContent = ((fields[8] * 100 || 0)).toFixed(2) + '%';
+            document.getElementById('output10').textContent = fields[10];
+
+            document.getElementById('schom1').textContent = Number(fields[31] || 0).toLocaleString() + " אשח";
+            document.getElementById('schom2').textContent = Number(fields[33] || 0).toLocaleString() + " אשח";
+            document.getElementById('schom3').textContent = Number(fields[35] || 0).toLocaleString() + " אשח";
+            document.getElementById('schom4').textContent = Number(fields[37] || 0).toLocaleString() + " אשח";
+            document.getElementById('schom5').textContent = Number(fields[39] || 0).toLocaleString() + " אשח";
+            document.getElementById('schom6').textContent = Number(fields[41] || 0).toLocaleString() + " אשח";
+            document.getElementById('schom7').textContent = Number(fields[43] || 0).toLocaleString() + " אשח";
+
+            document.getElementById('ahuz1').textContent = (Number(fields[32] || 0) * 100).toLocaleString() + '%';
+            document.getElementById('ahuz2').textContent = (Number(fields[34] || 0) * 100).toLocaleString() + '%';
+            document.getElementById('ahuz3').textContent = (Number(fields[36] || 0) * 100).toLocaleString() + '%';
+            document.getElementById('ahuz4').textContent = (Number(fields[38] || 0) * 100).toLocaleString() + '%';
+            document.getElementById('ahuz5').textContent = (Number(fields[40] || 0) * 100).toLocaleString() + '%';
+            document.getElementById('ahuz6').textContent = (Number(fields[42] || 0) * 100).toLocaleString() + '%';
+            document.getElementById('ahuz7').textContent = (Number(fields[44] || 0) * 100).toLocaleString() + '%';
+        })
+        .catch(error => console.error('Error fetching the file:', error));
+});    
