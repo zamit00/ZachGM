@@ -2,10 +2,7 @@ document.getElementById('goToPage2')?.addEventListener('click', () => {
     window.location.href = 'netunim.html';
 });
 
-document.getElementById('goToPage1')?.addEventListener('click', () => {
-    
-    window.location.href = 'index.html';
-});
+
 
 document.getElementById('mybutton').addEventListener('click', () => {
     let kupaID = parseInt(document.getElementsByName("txt1")[0]?.value);
@@ -64,10 +61,8 @@ document.getElementById('mybutton').addEventListener('click', () => {
         .catch(error => console.error('Error fetching the file:', error));
 }); 
 
-
-
-document.getElementById('product').addEventListener('change', function() {
-    const maslulSelect = document.getElementById('maslul-type');
+document.getElementById('goToPage1')?.addEventListener('click', () => {
+   const maslulSelect = document.getElementById('maslul-type');
     
     // Clear the current options
     maslulSelect.innerHTML = ''; 
@@ -86,5 +81,9 @@ document.getElementById('product').addEventListener('change', function() {
         option.textContent = optionData.text;
         maslulSelect.appendChild(option);
     });
+    return;
+    window.location.href = 'index.html';
 });
+
+
 
