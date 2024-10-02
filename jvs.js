@@ -3,12 +3,15 @@ document.getElementById('goToPage2')?.addEventListener('click', () => {
 });
 
 document.getElementById('goToPage1')?.addEventListener('click', () => {
+    
     window.location.href = 'index.html';
 });
 
 document.getElementById('mybutton').addEventListener('click', () => {
     let kupaID = parseInt(document.getElementsByName("txt1")[0]?.value);
-
+    if(parseInt(document.getElementsByName("txt1")[0]?.value)< 103){
+        return;
+    }
     // ניקוי פלטים קודמים
     for (let i = 1; i <= 10; i++) {
         document.getElementById(`output${i}`).textContent = '';
