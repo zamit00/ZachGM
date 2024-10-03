@@ -18,7 +18,13 @@ th{border: 1px solid black;width: auto;text-align: right;overflow: hidden; text-
 
 .alltables{
 // display:flex;
- margin-bottom: 10px;}
+  overflow-x: auto;
+ margin-bottom: 10px;
+min-width: 600px;
+  width: 100%;
+  max-width:100%;
+  border-collapse: collapse;
+}
 .tdbig{width: 300px;}
 .tdsmall{width: 150px}
 #tdbahir{background-color: rgb(91, 127, 219);color: white;display: flex;}
