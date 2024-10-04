@@ -18,10 +18,13 @@ document.getElementById('mybutton').addEventListener('click', () => {
             document.getElementById(`ahuz${i}`).textContent = '';
         }
     }
-    console.log(kupaID)+"aa"
-// קורא נתונים מקובץ 
-    if (kupaID==="" ||  kupaID<103) {return;}
-    
+
+
+   if (isNaN(kupaID)) {
+    return;
+}
+
+ // קורא נתונים מקובץ    
     fetch('data.txt')
         .then(response => response.text())
         .then(data => {
