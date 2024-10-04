@@ -4,20 +4,14 @@
 #product{margin-right: 30px;height: 25px;width: 125px;}
 #management-type{margin-right: 7px;height: 25px;width: 125px;}
 #maslul-type{margin-right: 12px;height: 25px;width: 250px;}
-/* .rd{display: flex; max-width: 550px;}
-#mybutton-type {font-size:25px;  margin-top: 15px;height: 60px;width: 100px;margin-bottom: 20px;}
-.rdb3{margin-right: 4px;width:100px;}
-.rdb4{margin-right: 0px;width:100px;}
-.rdb{width:100px;} */
-
+.thb,.thbh {height: 50px;border: 1px solid black;width: 250px;font-size:25px;text-align:auto;
+           color: white;vertical-align: middle;}
 #exposure2-preference {margin-right: 15x;}
 #goToPage2,#goToPage1 {font-size:25px; margin-top: 15px;height: 60px;width: 100px;margin-bottom: 15px;}
 .button{ font-size:25px;  margin-top: 15px;height: 60px;width: 100px;margin-bottom: 20px;}
 td{border: 1px solid black;text-align: center;vertical-align:middle;}
-.thb{height: 50px; border: 1px solid black;width:font-size:25px;text-align:auto;overflow: hidden; text-overflow: ellipsis;
-  font-size: 25px; background-color: blue;color: white;width: 250px; vertical-align: middle;}
-.thbh{height: 50px;border: 1px solid black;width:font-size:25px; text-align: auto;overflow: hidden; text-overflow: ellipsis;
-   font-size: 25px; background-color: rgb(91, 127, 219);color: white;width: 250px; vertical-align: middle;}
+.thb{background-color: blue; }
+.thbh{background-color: rgb(91, 127, 219);}
 #text1 {margin-right: 25px;}
 .alltables{
 // display:flex;
