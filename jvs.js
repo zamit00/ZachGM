@@ -28,7 +28,7 @@ document.getElementById('mybutton').addEventListener('click', () => {
             if (startIndex === -1) return;
 
             let splitContent = data.substring(startIndex); 
-            const endString = splitContent.indexOf(`</${kupaID}>,`);
+            const endString = splitContent.indexOf(`<${kupaID}/>,`);
             let allString = endString !== -1 ? splitContent.substring(0, endString ) : '';
             
             console.log(allString);
