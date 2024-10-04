@@ -18,7 +18,7 @@ td{border: 1px solid black;text-align: center;vertical-align:middle;}
   font-size: 25px; background-color: blue;color: white;width: 250px; vertical-align: middle;}
 .thbh{height: 50px;border: 1px solid black;width:font-size:25px; text-align: auto;overflow: hidden; text-overflow: ellipsis;
    font-size: 25px; background-color: rgb(91, 127, 219);color: white;width: 250px; vertical-align: middle;}
-
+#text1 {margin-right: 25px;}
 .alltables{
 // display:flex;
   overflow-x: auto;
