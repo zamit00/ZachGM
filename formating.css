@@ -12,9 +12,9 @@
 
 #exposure2-preference {margin-right: 15x;}
 .button{margin-top: 20px;height: 35px;width: 100px;margin-bottom: 20px;}
-td{border: 1px solid black;text-align: center;}
+td{border: 1px solid black;text-align: center;vertical-align:middle;}
 th{border: 1px solid black;width:font-size:30px; auto;text-align: right;overflow: hidden; text-overflow: ellipsis;
-  background-color: blue;color: white;width: 250px;}
+  background-color: blue;color: white;width: 250px; vertical-align: middle;}
 
 .alltables{
 // display:flex;
