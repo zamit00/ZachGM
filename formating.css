@@ -14,7 +14,7 @@
 .button{margin-top: 20px;height: 35px;width: 100px;margin-bottom: 20px;}
 td{border: 1px solid black;text-align: center;}
 th{border: 1px solid black;width: auto;text-align: right;overflow: hidden; text-overflow: ellipsis;
-  background-color: blue;color: white;min-width: 200px;max-width: 250px;}
+  background-color: blue;color: white;width: 250px;}
 
 .alltables{
 // display:flex;
