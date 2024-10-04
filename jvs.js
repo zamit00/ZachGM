@@ -19,7 +19,7 @@ document.getElementById('mybutton').addEventListener('click', () => {
         }
     }
 // קורא נתונים מקובץ 
-    if (kupaID==="" ||  kupaID===0) {return;}
+    if (kupaID==="" ||  kupaID<103) {return;}
     
     fetch('data.txt')
         .then(response => response.text())
