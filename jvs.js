@@ -37,9 +37,9 @@ document.getElementById('mybutton').addEventListener('click', () => {
             document.getElementById('output4').textContent = fields[3] || '';
             document.getElementById('output5').textContent = fields[4] || '';
             document.getElementById('output6').textContent = Number(fields[6] || 0).toLocaleString() + " מלשח";
-            document.getElementById('output7').textContent = ((fields[7] * 100 || 0)).toFixed(2) + '%';
-            document.getElementById('output8').textContent = ((fields[8] * 100 || 0)).toFixed(2) + '%';
-            document.getElementById('output9').textContent = ((fields[9] * 100 || 0)).toFixed(2) + '%';
+            document.getElementById('output7').textContent = ((fields[7] || 0)).toFixed(2) + '%';
+            document.getElementById('output8').textContent = ((fields[8] || 0)).toFixed(2) + '%';
+            document.getElementById('output9').textContent = ((fields[9] || 0)).toFixed(2) + '%';
             document.getElementById('output10').textContent = fields[11];
 
             document.getElementById('schom1').textContent = Number(fields[31] || 0).toLocaleString() + " אשח";
