@@ -27,7 +27,7 @@ min-width: 600px;
 }
 .tdbig{width: 400px;height: 50px;}
 .tdsmall{width: 200px;height: 50px;}
-#tdbahir{background-color: rgb(91, 127, 219);color: white;display: flex;}
+#tdbahir{height:50px; background-color: rgb(91, 127, 219);color: white;display: flex;}
 .tdbold{background-color: blue;color: white;}
 .table-container2,.table-container4{margin-right: 5px;margin-top: 15px;}
 
