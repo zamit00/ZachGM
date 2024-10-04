@@ -22,16 +22,12 @@ document.getElementById('mybutton').addEventListener('click', () => {
     fetch('data.txt')
         .then(response => response.text())
         .then(data => {
-            let searchString=`<${kupaID}>`;
+            let searchString=`<${kupaID}>,`;
             const startIndex = data.indexOf(searchString)+ searchString.length;
 
             if (startIndex === -1) return;
 
-            let splitContent = data.substring(startIndex); 
-            const endString = splitContent.indexOf(`<${kupaID}/>,`);
-            let allString = endString !== -1 ? splitContent.substring(0, endString ) : '';
-            
-            console.log(allString);
+            let allString = data.substring(startIndex); 
 
             let fields = allString.split(',');
 // ממלא שדות נתונים בטבלאות
