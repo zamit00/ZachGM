@@ -18,6 +18,7 @@ document.getElementById('mybutton').addEventListener('click', () => {
             document.getElementById(`ahuz${i}`).textContent = '';
         }
     }
+    console.log(kupaID)
 // קורא נתונים מקובץ 
     if (kupaID==="" ||  kupaID<103) {return;}
     
