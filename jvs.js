@@ -18,9 +18,8 @@ document.getElementById('mybutton').addEventListener('click', () => {
             document.getElementById(`ahuz${i}`).textContent = '';
         }
     }
-// קורא נתונים מקובץ דאטה
-   let kupacheack= document.getElementsByName("txt1").value;
-    if (kupacheack==="") {return;}
+// קורא נתונים מקובץ 
+    if (kupaID==="" ||  kupaID===0) {return;}
     
     fetch('data.txt')
         .then(response => response.text())
