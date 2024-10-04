@@ -19,7 +19,9 @@ document.getElementById('mybutton').addEventListener('click', () => {
         }
     }
 // קורא נתונים מקובץ דאטה
-    if (kupaID==="") {return;}
+   let kupacheack= document.getElementsByName("txt1").value;
+    if (kupacheack==="") {return;}
+    
     fetch('data.txt')
         .then(response => response.text())
         .then(data => {
