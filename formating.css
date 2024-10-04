@@ -4,9 +4,9 @@
 #product{margin-right: 30px;height: 25px;width: 125px;}
 #management-type{margin-right: 7px;height: 25px;width: 125px;}
 #maslul-type{margin-right: 12px;height: 25px;width: 250px;}
-.thb {height: 50px;border: 1px solid black;width: 250px;font-size:25px;text-align:auto;
+.thb {height: 50px;border: 1px solid black;width: 300px;font-size:25px;text-align:auto;
            color: white;vertical-align: middle;background-color: blue;}
-.thbh {height: 50px;border: 1px solid black;width: 250px;font-size:25px;text-align:auto;
+.thbh {height: 50px;border: 1px solid black;width: 300px;font-size:25px;text-align:auto;
            color: white;vertical-align: middle;background-color: rgb(91, 127, 219);}
 #nh3,#nh4,#nh5 {text-align: center;}
 .tdsmall{width: 200px;height: 50px;font-size: 25px;border: 1px solid black;text-align: center;vertical-align:middle;}
