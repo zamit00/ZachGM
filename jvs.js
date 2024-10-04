@@ -22,19 +22,20 @@ document.getElementById('mybutton').addEventListener('click', () => {
     fetch('data.txt')
         .then(response => response.text())
         .then(data => {
-            const startIndex = data.indexOf(`<kupa${kupaID}>`);
+            let searchString=`<${kupaID}>`;
+            const startIndex = data.indexOf(searchString)+ searchString.length;
 
             if (startIndex === -1) return;
 
             let splitContent = data.substring(startIndex); 
-            const endString = splitContent.indexOf("</Row>");
-            let allString = endString !== -1 ? splitContent.substring(0, endString + 6) : '';
-
+            const endString = splitContent.indexOf(`</${kupaID}>`);
+            let allString = endString !== -1 ? splitContent.substring(0, endString ) : '';
+            
             console.log(allString);
 
             let fields = allString.split(',');
 // ממלא שדות נתונים בטבלאות
-            document.getElementById('output1').textContent = kupaID;
+            document.getElementById('output1').textContent = fields[0] || '';
             document.getElementById('output2').textContent = fields[1] || '';
             document.getElementById('output3').textContent = fields[2] || '';
             document.getElementById('output4').textContent = fields[3] || '';
