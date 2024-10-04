@@ -13,7 +13,7 @@
 #exposure2-preference {margin-right: 15x;}
 .button{margin-top: 20px;height: 35px;width: 100px;margin-bottom: 20px;}
 td{border: 1px solid black;text-align: center;}
-th{border: 1px solid black;width: auto;text-align: right;overflow: hidden; text-overflow: ellipsis;
+th{border: 1px solid black;width:font-size:30px; auto;text-align: right;overflow: hidden; text-overflow: ellipsis;
   background-color: blue;color: white;width: 250px;}
 
 .alltables{
