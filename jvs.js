@@ -12,6 +12,7 @@ function handleSelectChange() {
     if (nihulSelect.value === "ללא העדפה") {
             value2 = muzarSelect.value;  // Assign value2 from muzarSelect if condition is met
         } else {
+        
             value2 = nihulSelect.value;  // Otherwise, assign it from nihulSelect
         }
 
@@ -26,6 +27,14 @@ function getMaslul(x,y) {
     if (x === "" || y === "") {
         return;
     } else {
+
+        const act1="מתמחים בניהול אקטיבי"; const act2="כללי";const act3 = "אג\"ח";
+        const act4="מניות";const act5="שיקלי"; const act6="מתמחים באפיקי השקעה סחירים"; 
+
+        const act7="עוקבי מדדים"; const act8="מדד";
+
+        const act9="קיימות"; 
+        const act10="הלכתי";      
      
  // קורא נתונים מקובץ    
     fetch('data.txt')
@@ -33,11 +42,41 @@ function getMaslul(x,y) {
         .then(data => {
     let fieldRashi = data.split('maslulend'); 
     fieldRashi.forEach(function(item, index) {
+     if (y===x){
+            if (item.includes(x) && item.includes(y)) {
+            let fields = item.split(',');
+            addOption(fields[1], fields[2]);
+           }  
+     }   
 
-        if (item.includes(x) && item.includes(y)) {
-       let fields = item.split(',');
-        addOption(fields[1], fields[2]);
-    } 
+    if (y==="אקטיבי"){
+            if (item.includes(x) && (item.includes(act1) || item.includes(act2) || item.includes(act3)
+             || item.includes(act4) || item.includes(act5) || item.includes(act6))) {
+            let fields = item.split(',');
+            addOption(fields[1], fields[2]);
+           }  
+     }  
+
+    if (y==="פאסיבי"){
+            if (item.includes(x) && (item.includes(act7) || item.includes(act8) )) {
+            let fields = item.split(',');
+            addOption(fields[1], fields[2]);
+           }  
+     }  
+    if (y==="קיימות"){
+            if (item.includes(x) && item.includes(act9) ) {
+            let fields = item.split(',');
+            addOption(fields[1], fields[2]);
+           }  
+     } 
+
+    if (y==="קיימות"){
+            if (item.includes(x) && item.includes(act10) ) {
+            let fields = item.split(',');
+            addOption(fields[1], fields[2]);
+           }  
+     } 
+    
     }); 
     });
     }
