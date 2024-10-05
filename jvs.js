@@ -1,7 +1,9 @@
 // אירוע שינוי בתיבת בחירה מוצר
-document.getElementById('product').addEventListener('change', function() {
-    var selectedValue = this.value;
-    console.log("You selected: " + selectedValue);
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('product').addEventListener('change', function() {
+        var selectedValue = this.value;
+        console.log("You selected: " + selectedValue);
+    });
 });
 
 // אירוע מעבר למסך שני
