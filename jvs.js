@@ -3,6 +3,11 @@ document.getElementById('management-type').addEventListener('change', handleSele
 document.getElementById('maslul-type').addEventListener('mousedown', handleSelectChange);
 
 function handleSelectChange() {
+    document.getElementById('maslul-type').innerHTML = '';
+    let optButton = document.getElementById("optButton");
+    optButton.value = ""; // Assign value
+    optButton.textContent = ""; // Assign text
+    
     let  muzarSelect; let nihulSelect;
     muzarSelect = document.getElementById('product');
     nihulSelect = document.getElementById('management-type');
@@ -27,7 +32,6 @@ function getMaslul(x,y) {
     if (x === "" || y === "") {
         return;
     } else {
-
         const act1="מתמחים בניהול אקטיבי"; const act2="כללי";const act3 = "אג\"ח";
         const act4="מניות";const act5="שיקלי"; const act6="מתמחים באפיקי השקעה סחירים"; 
 
