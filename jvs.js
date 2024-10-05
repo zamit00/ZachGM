@@ -110,10 +110,10 @@ window.addEventListener('beforeunload', function (e) {
 });
 //בחירת מסלול
 document.getElementById('maslul-type').addEventListener('mousedown', function() {
-    var muzarSelect = document.getElementById('product');
-    var nihulSelect = document.getElementById('management-type');
-    var value1 = muzarSelect.value;
-    var value2 = nihulSelect.value;
+    const muzarSelect = document.getElementById('product');
+    const nihulSelect = document.getElementById('management-type');
+    const value1 = muzarSelect.value;
+    const value2 = nihulSelect.value;
 
     if (value1 === "" || value2 === "") {
         alert("נדרש לבחור סוג מוצר וסוג ניהול");
