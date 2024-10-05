@@ -27,7 +27,6 @@ function getMaslul(x, y) {
         return;
     } else {
         document.getElementById('maslul-type').innerHTML = '';
-        document.getElementById('maslul-type1').innerHTML = '';
         const act1="מתמחים בניהול אקטיבי"; const act2="כללי";const act3 = "אג\"ח";
         const act4="מניות";const act5="שיקלי"; const act6="מתמחים באפיקי השקעה סחירים"; 
         const act11="מודל חכ\"מ אחר";
@@ -84,7 +83,7 @@ function getMaslul(x, y) {
 function addOption(value, text) {
     // Get the select element
     var select = document.getElementById('maslul-type');
-    var select1 = document.getElementById('maslul-type1');
+    
     // Create a new option element
     var newOption = document.createElement('option');
     newOption.value = value;
@@ -92,7 +91,6 @@ function addOption(value, text) {
 
     // Append the new option to the select element
     select.appendChild(newOption);
-    select1.appendChild(newOption);
 }
 // --------------------------------------------------------------------------------------------
 document.getElementById('maslul-type').addEventListener('change', function() {
