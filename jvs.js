@@ -100,8 +100,10 @@ document.getElementById('maslul-type').addEventListener('change', function() {
     let muzarSelect;
     muzarSelect = document.getElementById('maslul-type');
     let value1;let varsplit;
-    value1    = muzarSelect.options[muzarSelect.selectedIndex].value;
+    value1 = muzarSelect.options[muzarSelect.selectedIndex].value;
+    console.log(value1);
     varsplit = value1.split('-');
+    console.log(varsplit[0]);
     document.getElementsById("optButton").value=varsplit[0];
     document.getElementsById("optButton").text=varsplit[0];
     console.log(parseInt(document.getElementsByName("txt1")[0]?.value));
