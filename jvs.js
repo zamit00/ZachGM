@@ -70,7 +70,7 @@ function getMaslul(x,y) {
            }  
      } 
 
-    if (y==="קיימות"){
+    if (y==="הלכתי"){
             if (item.includes(x) && item.includes(act10) ) {
             let fields = item.split(',');
             addOption(fields[1], fields[2]);
