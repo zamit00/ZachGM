@@ -1,6 +1,6 @@
-document.getElementById('product').addEventListener('change', handleSelectChange);
-document.getElementById('management-type').addEventListener('change', handleSelectChange);
-document.getElementById('maslul-type').addEventListener('mousedown', handleSelectChange);
+document.getElementById('product').addEventListener('change', handleSelectChange());
+document.getElementById('management-type').addEventListener('change', handleSelectChange());
+document.getElementById('maslul-type').addEventListener('mousedown', handleSelectChange());
 
 function handleSelectChange() {
     let  muzarSelect; let nihulSelect;
