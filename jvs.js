@@ -1,6 +1,6 @@
-document.getElementById('product').addEventListener('change', handleSelectChange());
-document.getElementById('management-type').addEventListener('change', handleSelectChange());
-document.getElementById('maslul-type').addEventListener('mousedown', handleSelectChange());
+document.getElementById('product').addEventListener('change', handleSelectChange);
+document.getElementById('management-type').addEventListener('change', handleSelectChange);
+document.getElementById('maslul-type').addEventListener('mousedown', handleSelectChange);
 
 function handleSelectChange() {
     let  muzarSelect; let nihulSelect;
@@ -104,8 +104,8 @@ document.getElementById('maslul-type').addEventListener('change', function() {
     console.log(value1);
     varsplit = value1.split('-');
     console.log(varsplit[0]);
-    document.getElementsById("optButton").value=varsplit[0];
-    document.getElementsById("optButton").text=varsplit[0];
+    document.getElementById("optButton").value=varsplit[0];
+    document.getElementById("optButton").text=varsplit[0];
     console.log(parseInt(document.getElementsByName("txt1")[0]?.value));
     });
 
