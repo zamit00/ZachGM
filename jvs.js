@@ -111,9 +111,23 @@ document.getElementById('maslul-type').addEventListener('mousedown', function() 
 });
     
 function getMaslul(x,y) {
-  
-console.log("Select:", x + " " + y)
+ // קורא נתונים מקובץ    
+    fetch('data.txt')
+        .then(response => response.text())
+        .then(data => {
+    let fieldRashi = allString.split('maslulend'); 
+    fieldRashi.forEach(function(item, index) {
 
+        if (item.includes(x) && item.includes(y)) {
+        console.log(`Both "${x}" and "${y}" found in data.`);
+        let fields = item.split(',');
+        console.log(fields[1]+ "," + fields[2]);
+        
+    }
+    
+});
+
+});
 }  
 
 
