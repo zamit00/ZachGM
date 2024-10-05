@@ -126,7 +126,7 @@ document.getElementById('maslul-type').addEventListener('mousedown', function() 
 
 function getMaslul(x,y) {
    // Check if either of the select fields is empty
-    if (value1 === "" || value2 === "") {
+    if (x === "" || y === "") {
         return;
     } else {
         
