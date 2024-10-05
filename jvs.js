@@ -17,7 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const nihulSelect = document.getElementById('management-type');
     
     const value1 = muzarSelect.value;
+
+    if (nihulSelect.value==="ללא העדפה") {
+    const value2 = muzarSelect.value;
+} else {
     const value2 = nihulSelect.value;
+}
         // Call your function if both values are selected
         getMaslul(value1, value2);
         
