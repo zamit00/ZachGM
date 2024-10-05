@@ -50,9 +50,9 @@ function getMaslul(x, y) {
     
             const actionsA = [act1, act2, act3, act4, act5, act6];
             if (fields[3].match(new RegExp(x)) && actionsA.some(action => fields[5].includes(action))) {
-        addOption(fields[1], fields[2]);
-    }
-}  
+            addOption(fields[1], fields[2]);
+            }
+           }  
 
           if (y==="פאסיבי"){ 
                const actionsP = [act7, act8];
