@@ -175,10 +175,4 @@ if (!data.includes(searchString)) {
         })
         .catch(error => console.error('Error fetching the file:', error));
 });
-// --------------------------------------------------------------------------------------------
-window.addEventListener('beforeunload', function (e) {
-  // Custom logic to execute before the page unloads (e.g., on refresh)
- // e.preventDefault();  Necessary for some browsers
-  e.returnValue = null; // Required to trigger the confirmation dialog in some browsers
-   
-});
+
