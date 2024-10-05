@@ -1,12 +1,21 @@
+// אירוע שינוי בתיבת בחירה מוצר
+document.getElementById('product').addEventListener('change', function() {
+    var selectedValue = this.value;
+    console.log("You selected: " + selectedValue);
+});
+
+// אירוע מעבר למסך שני
 document.getElementById('goToPage2')?.addEventListener('click', () => {
     window.location.href = 'netunim.html';
 });
 
+// אירוע חזרה למסך ראשי
 document.getElementById('goToPage1')?.addEventListener('click', () => {
     
     window.location.href = 'index.html';
 });
 
+// אירוע הצג נתונים
 document.getElementById('mybutton').addEventListener('click', () => {
     let kupaID = parseInt(document.getElementsByName("txt1")[0]?.value);
     
@@ -79,9 +88,6 @@ window.addEventListener('beforeunload', function (e) {
   e.returnValue = ''; // Required to trigger the confirmation dialog in some browsers
   document.getElementById('product').innerHTML = ""; 
 });
-document.getElementById('product').addEventListener('change', function() {
-    var selectedValue = this.value;
-    console.log("You selected: " + selectedValue);
-});
+
 
 
