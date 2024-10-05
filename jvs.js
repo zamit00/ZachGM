@@ -46,17 +46,18 @@ function getMaslul(x, y) {
               addOption(fields[1], fields[2]);
              }  
            }   
-          if (y==="אקטיבי"){
-              
-              if (fields[3].includes(x) && (fields[6].includes(act1) || fields[6].includes(act2) || fields[6].includes(act3)
-               || fields[6].includes(act4) || fields[6].includes(act5) || fields[6].includes(act6))) {
-              addOption(fields[1], fields[2]);
-             }  
-           }  
+          if (y === "אקטיבי") {
+    
+            const actionsA = [act1, act2, act3, act4, act5, act6];
+            if (fields[3].includes(x) && actionsA.some(action => fields[6].includes(action))) {
+        addOption(fields[1], fields[2]);
+    }
+}  
 
-          if (y==="פאסיבי"){              
-              if (fields[3].includes(x) && (fields[6].includes(act7) || fields[6].includes(act8) )) {
-              addOption(fields[1], fields[2]);
+          if (y==="פאסיבי"){ 
+               const actionsP = [act7, act8];
+              if (fields[3].includes(x) && actionsP.some(action => fields[6].includes(action))) {
+        addOption(fields[1], fields[2]);
              }  
            }  
           if (y==="קיימות"){             
