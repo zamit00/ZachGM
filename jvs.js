@@ -115,7 +115,7 @@ function getMaslul(x,y) {
     fetch('data.txt')
         .then(response => response.text())
         .then(data => {
-    let fieldRashi = allString.split('maslulend'); 
+    let fieldRashi = data.split('maslulend'); 
     fieldRashi.forEach(function(item, index) {
 
         if (item.includes(x) && item.includes(y)) {
