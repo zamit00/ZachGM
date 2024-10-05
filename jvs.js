@@ -106,17 +106,7 @@ document.getElementById('maslul-type').addEventListener('change', function() {
     console.log(parseInt(document.getElementsByName("txt1")[0]?.value));
     });
 
-// --------------------------------------------------------------------------------------------
-// אירוע מעבר למסך שני
-document.getElementById('goToPage2')?.addEventListener('click', () => {
-    window.location.href = 'netunim.html';
-});
-// --------------------------------------------------------------------------------------------
-// אירוע חזרה למסך ראשי
-document.getElementById('goToPage1')?.addEventListener('click', () => {
-    
-    window.location.href = 'index.html';
-});
+
 // --------------------------------------------------------------------------------------------
 // אירוע הצג נתונים
 document.getElementById('mybutton').addEventListener('click', () => {
