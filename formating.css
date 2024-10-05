@@ -2,7 +2,7 @@
 /*.radio-group {max-width: 750px;display: flex; height: 25px;padding: 5px;border: 1px solid rgb(70, 70, 75); background-color: rgb(226, 226, 234); color: rgb(3, 3, 1);font-size: larger;}*/
 .muzar {margin: 15px;}
 #product{margin-right: 30px;height: 25px;width: 125px;}
-#management-type{margin-right: 7px;height: 25px;width: 125px;}
+#management-type{margin-right: 7px;height: 25px;width: 180px;}
 #maslul-type{margin-right: 12px;height: 25px;width: 250px;}
 .thb {height: 50px;border: 1px solid black;width: 300px;font-size:25px;text-align:auto;
            color: white;vertical-align: middle;background-color: blue;}
