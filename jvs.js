@@ -44,7 +44,8 @@ function getMaslul(x, y) {
            if (y===x){
               if (fields[3].match(new RegExp(x)) && item.includes(y)) {
               addOption(fields[1], fields[2]);
-             }  
+             } 
+               resolve();
            }   
           if (y === "אקטיבי") {
     
@@ -52,24 +53,28 @@ function getMaslul(x, y) {
             if (fields[3].match(new RegExp(x)) && actionsA.some(action => fields[5].includes(action))) {
             addOption(fields[1], fields[2]);
             }
+              resolve();
            }  
 
           if (y==="פאסיבי"){ 
                const actionsP = [act7, act8];
               if (fields[3].match(new RegExp(x)) && actionsP.some(action => fields[5].includes(action))) {
         addOption(fields[1], fields[2]);
-             }  
+             } 
+              resolve();
            }  
           if (y==="קיימות"){             
               if (fields[3].match(new RegExp(x)) && fields[5].includes(act9) ) {
               addOption(fields[1], fields[2]);
-             }  
+             }
+              resolve();
            } 
 
           if (y==="הלכתי"){
               if (fields[3].match(new RegExp(x)) && fields[5].includes(act10) ) {
               addOption(fields[1], fields[2]);
-             }  
+             }
+              resolve();
            } 
     
     }); 
