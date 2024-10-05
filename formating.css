@@ -6,9 +6,9 @@
 
 
 #maslul-type {
-  appearance: none;  /* Removes default mobile styling */
-  //z-index: 10;  /* Make sure it's on top of other elements */
-  //position: relative;
+ /* appearance: none; 
+  z-index: 10;  
+  position: relative;*/
  margin-right: 25px;height: 25px;width: 350px;
 }
 
