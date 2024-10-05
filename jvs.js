@@ -119,9 +119,7 @@ function getMaslul(x,y) {
     fieldRashi.forEach(function(item, index) {
 
         if (item.includes(x) && item.includes(y)) {
-        console.log(`Both "${x}" and "${y}" found in data.`);
         var fields = item.split(',');
-        console.log(fields[1]+ "," + fields[2]);
         addOption(fields[1], fields[2]);
     }
     
