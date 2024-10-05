@@ -122,7 +122,7 @@ function getMaslul(x,y) {
         console.log(`Both "${x}" and "${y}" found in data.`);
         var fields = item.split(',');
         console.log(fields[1]+ "," + fields[2]);
-        addOption(fields[1], fields[2])
+        addOption(fields[1], fields[2]);
     }
     
 });
