@@ -37,38 +37,35 @@ function getMaslul(x, y) {
        fetch('data.txt')
           .then(response => response.text())
           .then(data => {
+            
           let fieldRashi = data.split('maslulend'); 
           fieldRashi.forEach(function(item) {
+          let fields = item.split(',');              
            if (y===x){
-              let fields = item.split(',');
               if (fields[3].includes(x) && item.includes(y)) {
               addOption(fields[1], fields[2]);
              }  
            }   
-
           if (y==="אקטיבי"){
-              let fields = item.split(',');
+              
               if (fields[3].includes(x) && (fields[6].includes(act1) || fields[6].includes(act2) || fields[6].includes(act3)
                || fields[6].includes(act4) || fields[6].includes(act5) || fields[6].includes(act6))) {
               addOption(fields[1], fields[2]);
              }  
            }  
 
-          if (y==="פאסיבי"){
-              let fields = item.split(',');
+          if (y==="פאסיבי"){              
               if (fields[3].includes(x) && (fields[6].includes(act7) || fields[6].includes(act8) )) {
               addOption(fields[1], fields[2]);
              }  
            }  
-          if (y==="קיימות"){
-              let fields = item.split(',');
+          if (y==="קיימות"){             
               if (fields[3].includes(x) && fields[6].includes(act9) ) {
               addOption(fields[1], fields[2]);
              }  
            } 
 
           if (y==="הלכתי"){
-              let fields = item.split(',');
               if (fields[3].includes(x) && fields[6].includes(act10) ) {
               addOption(fields[1], fields[2]);
              }  
