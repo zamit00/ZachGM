@@ -72,4 +72,11 @@ if (!data.includes(searchString)) {
             document.getElementById('ahuz7').textContent = (Number(fields[44] || 0) * 100).toLocaleString() + '%';
         })
         .catch(error => console.error('Error fetching the file:', error));
-});    
+});
+window.addEventListener('beforeunload', function (e) {
+  // Custom logic to execute before the page unloads (e.g., on refresh)
+  e.preventDefault(); // Necessary for some browsers
+  e.returnValue = ''; // Required to trigger the confirmation dialog in some browsers
+  document.getElementById('product').innerHTML = ""; 
+});
+
