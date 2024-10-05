@@ -3,29 +3,31 @@ document.getElementById('management-type').addEventListener('change', handleSele
 document.getElementById('maslul-type').addEventListener('mousedown', handleSelectChange);
 
 function handleSelectChange() {
-    document.getElementById('maslul-type').innerHTML = '';
-    let optButton = document.getElementById("optButton");
-    optButton.value = ""; // Assign value
-    optButton.textContent = ""; // Assign text
+  
+       let optButton = document.getElementById("optButton");
+       optButton.value = ""; // Assign value
+       optButton.textContent = ""; // Assign text
     
-    let  muzarSelect; let nihulSelect;
-    muzarSelect = document.getElementById('product');
-    nihulSelect = document.getElementById('management-type');
+        let  muzarSelect; let nihulSelect;
+        muzarSelect = document.getElementById('product');
+        nihulSelect = document.getElementById('management-type');
 
-    let value1;let value2;
-    value1 = muzarSelect.value;
-    if (nihulSelect.value === "ללא העדפה") {
+        let value1;let value2;
+        value1 = muzarSelect.value;
+        if (nihulSelect.value === "ללא העדפה") {
             value2 = muzarSelect.value;  // Assign value2 from muzarSelect if condition is met
-        } else {
+            } else {
         
             value2 = nihulSelect.value;  // Otherwise, assign it from nihulSelect
         }
 
     // Only call the function if both values are selected (non-empty)
-    if (value1 !== "" && value2 !== "") {
-        getMaslul(value1, value2);
-    }
-}
+        if (value1 !== "" && value2 !== "") {
+            getMaslul(value1, value2);
+        }
+       
+  
+}    
 
 function getMaslul(x,y) {
    // Check if either of the select fields is empty
