@@ -97,15 +97,16 @@ function addOption(value, text) {
 }
 
 document.getElementById('maslul-type').addEventListener('change', function() {
-    let muzarSelect;
-    muzarSelect = document.getElementById('maslul-type');
-    let value1;let varsplit;
-    value1 = muzarSelect.options[muzarSelect.selectedIndex].value;
+    let muzarSelect = document.getElementById('maslul-type');
+    let value1 = muzarSelect.options[muzarSelect.selectedIndex].value;
     console.log(value1);
-    varsplit = value1.split('-');
+    let varsplit = value1.split('-');
     console.log(varsplit[0]);
-    document.getElementById("optButton").value=varsplit[0];
-    document.getElementById("optButton").text=varsplit[0];
+
+    // Correctly set the value and text of the option with id "optButton"
+    let optButton = document.getElementById("optButton");
+    optButton.value = varsplit[0]; // Assign value
+    optButton.textContent = varsplit[0]; // Assign text
     console.log(parseInt(document.getElementsByName("txt1")[0]?.value));
     });
 
