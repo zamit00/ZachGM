@@ -20,7 +20,7 @@ document.getElementById('mybutton').addEventListener('click', () => {
     }
 
 
-   if (isNaN(kupaID)) { return;}
+   if (isNaN(kupaID)) return;
 
  // קורא נתונים מקובץ    
     fetch('data.txt')
