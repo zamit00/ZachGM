@@ -96,7 +96,20 @@ window.addEventListener('beforeunload', function (e) {
    
 });
 //בחירת מסלול
-document.getElementById('option-type').addEventListener('click', function() {
+document.getElementById('option-type').addEventListener('focus', function() {
+    const muzarSelect = document.getElementById('select1');
+    const nihulSelect = document.getElementById('select2');
+    const value1 = select1.value;
+    const value2 = select2.value;
+
+    if (value1 === "" || value2 === "") {
+        alert("נדרש לבחור סוג מוצר וסוג ניהול");
+    } else {
+        // If both are selected, log the values
+        console.log("Select 1:", value1);
+        console.log("Select 2:", value2);
+    }
+    document.getElementById('option-type').addEventListener('mousedown', function() {
     const muzarSelect = document.getElementById('select1');
     const nihulSelect = document.getElementById('select2');
     const value1 = select1.value;
