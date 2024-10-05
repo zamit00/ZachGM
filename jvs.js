@@ -79,4 +79,9 @@ window.addEventListener('beforeunload', function (e) {
   e.returnValue = ''; // Required to trigger the confirmation dialog in some browsers
   document.getElementById('product').innerHTML = ""; 
 });
+document.getElementById('product').addEventListener('change', function() {
+    var selectedValue = this.value;
+    console.log("You selected: " + selectedValue);
+});
+
 
