@@ -7,9 +7,8 @@
 
 #maslul-type {
   appearance: none;  /* Removes default mobile styling */
-  -webkit-appearance: none;  /* For Safari */
-  z-index: 10;  /* Make sure it's on top of other elements */
-  position: relative;
+  //z-index: 10;  /* Make sure it's on top of other elements */
+  //position: relative;
  margin-right: 25px;height: 25px;width: 350px;
 }
 
