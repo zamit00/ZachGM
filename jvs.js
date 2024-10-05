@@ -95,6 +95,15 @@ window.addEventListener('beforeunload', function (e) {
   e.returnValue = null; // Required to trigger the confirmation dialog in some browsers
   document.getElementById('product').innerHTML = ""; 
 });
+//בחירת מסלול
+document.getElementById('product').addEventListener('focus', function() {
+    console.log("Select box opened");
+    let muzarSelect= document.getElementById('product').innerHTML;
+     let nihulSelect = document.getElementById('management-type').innerHTML;
+    if (muzarSelect === "" || nihulSelect === "") { alert("נדרש לבחור סוג מוצר וסוג ניהול");
+    return;}
+
+});
 
 
 
