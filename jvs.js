@@ -29,7 +29,7 @@ document.getElementById('mybutton').addEventListener('click', () => {
         .then(response => response.text())
         .then(data => {
             let searchString=`<${kupaID}>,`;
-             if (isNaN(searchString)) {return;}
+  //           if (isNaN(searchString)) {return;}
 }
             const startIndex = data.indexOf(searchString)+ searchString.length;
 
