@@ -3,12 +3,12 @@ document.getElementById('management-type').addEventListener('change', handleSele
 document.getElementById('maslul-type').addEventListener('mousedown', handleSelectChange);
 
 function handleSelectChange() {
-    const muzarSelect = document.getElementById('product');
-    const nihulSelect = document.getElementById('management-type');
-    
-    const value1 = muzarSelect.value;
-    let value2;
+    let  muzarSelect; let nihulSelect;
+    muzarSelect = document.getElementById('product');
+    nihulSelect = document.getElementById('management-type');
 
+    let value1;let value2;
+    value1 = muzarSelect.value;
     if (nihulSelect.value === "ללא העדפה") {
             value2 = muzarSelect.value;  // Assign value2 from muzarSelect if condition is met
         } else {
@@ -21,10 +21,52 @@ function handleSelectChange() {
     }
 }
 
+function getMaslul(x,y) {
+   // Check if either of the select fields is empty
+    if (x === "" || y === "") {
+        return;
+    } else {
+     
+ // קורא נתונים מקובץ    
+    fetch('data.txt')
+        .then(response => response.text())
+        .then(data => {
+    let fieldRashi = data.split('maslulend'); 
+    fieldRashi.forEach(function(item, index) {
 
+        if (item.includes(x) && item.includes(y)) {
+       let fields = item.split(',');
+        addOption(fields[1], fields[2]);
+    } 
+    }); 
+    });
+    }
+} 
 
+// add a new option
+function addOption(value, text) {
+    // Get the select element
+    var select = document.getElementById('maslul-type');
 
+    // Create a new option element
+    var newOption = document.createElement('option');
+    newOption.value = value;
+    newOption.textContent = value+ "-" +text;
 
+    // Append the new option to the select element
+    select.appendChild(newOption);
+}
+
+document.getElementById('maslul-type').addEventListener('change', function() {
+    let muzarSelect;
+    muzarSelect = document.getElementById('maslul-type');
+    let value1;let varsplit;
+    value1    = muzarSelect.options[muzarSelect.selectedIndex].value;
+    varsplit = value1.split('-');
+    document.getElementsById("optButton").value=varsplit[0];
+    document.getElementsById("optButton").text=varsplit[0];
+    console.log(parseInt(document.getElementsByName("txt1")[0]?.value));
+    });
 
 
 
@@ -122,56 +164,13 @@ window.addEventListener('beforeunload', function (e) {
 
 
 
-function getMaslul(x,y) {
-   // Check if either of the select fields is empty
-    if (x === "" || y === "") {
-        return;
-    } else {
-     
- // קורא נתונים מקובץ    
-    fetch('data.txt')
-        .then(response => response.text())
-        .then(data => {
-    let fieldRashi = data.split('maslulend'); 
-    fieldRashi.forEach(function(item, index) {
-
-        if (item.includes(x) && item.includes(y)) {
-        var fields = item.split(',');
-        addOption(fields[1], fields[2]);
-    }
-    
-});
-
-});
-    }
-}  
-
-
-// add a new option
-function addOption(value, text) {
-    // Get the select element
-    var select = document.getElementById('maslul-type');
-
-    // Create a new option element
-    var newOption = document.createElement('option');
-    newOption.value = value;
-    newOption.textContent = value+ "-" +text;
-
-    // Append the new option to the select element
-    select.appendChild(newOption);
-}
+ 
 
 
 
-document.getElementById('maslul-type').addEventListener('change', function() {
-    
-    const muzarSelect = document.getElementById('maslul-type');
-    var value1 = muzarSelect.options[muzarSelect.selectedIndex].value;
-    var varsplit = value1.split('-');
-    document.getElementsById("optButton").value=varsplit[0];
-    document.getElementsById("optButton").text=varsplit[0];
-    console.log(parseInt(document.getElementsByName("txt1")[0]?.value));
-    });
+
+
+
 
 
 
