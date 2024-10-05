@@ -120,15 +120,30 @@ function getMaslul(x,y) {
 
         if (item.includes(x) && item.includes(y)) {
         console.log(`Both "${x}" and "${y}" found in data.`);
-        let fields = item.split(',');
+        var fields = item.split(',');
         console.log(fields[1]+ "," + fields[2]);
-        
+        addOption(fields[1], fields[2])
     }
     
 });
 
 });
 }  
+
+
+// add a new option
+function addOption(value, text) {
+    // Get the select element
+    const select = document.getElementById('maslul-type');
+
+    // Create a new option element
+    const newOption = document.createElement('option');
+    newOption.value = value;
+    newOption.textContent = text;
+
+    // Append the new option to the select element
+    select.appendChild(newOption);
+}
 
 
 
