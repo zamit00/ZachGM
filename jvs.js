@@ -29,6 +29,12 @@ document.getElementById('mybutton').addEventListener('click', () => {
             let searchString=`<${kupaID}>,`;
 
 
+
+// Add your logic to check if `searchString` is found
+if (!data.includes(searchString)) {
+    return; // Exit the function if searchString is not found in the content
+}
+
             const startIndex = data.indexOf(searchString)+ searchString.length;
 
             if (startIndex === -1) return;
