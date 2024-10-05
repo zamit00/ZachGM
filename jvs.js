@@ -137,7 +137,7 @@ function addOption(value, text) {
     // Create a new option element
     const newOption = document.createElement('option');
     newOption.value = value;
-    newOption.textContent = text;
+    newOption.textContent = value+ "-" +text;
 
     // Append the new option to the select element
     select.appendChild(newOption);
