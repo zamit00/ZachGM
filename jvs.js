@@ -97,10 +97,10 @@ window.addEventListener('beforeunload', function (e) {
 });
 //בחירת מסלול
 document.getElementById('maslul-type').addEventListener('mousedown', function() {
-    const muzarSelect = document.getElementById('product');
-    const nihulSelect = document.getElementById('management-type');
-    const value1 = muzarSelect.value;
-    const value2 = nihulSelect.value;
+    var muzarSelect = document.getElementById('product');
+    var nihulSelect = document.getElementById('management-type');
+    var value1 = muzarSelect.value;
+    var value2 = nihulSelect.value;
 
     if (value1 === "" || value2 === "") {
         alert("נדרש לבחור סוג מוצר וסוג ניהול");
@@ -109,8 +109,46 @@ document.getElementById('maslul-type').addEventListener('mousedown', function() 
         getMaslul(value1,value2);
     }
 });
+
+
+// שינוי בבחירה
+document.getElementById('product').addEventListener('change', function() {
+    // Get the updated elements' values
+    var muzarSelect = document.getElementById('product');
+    var nihulSelect = document.getElementById('management-type');
     
+    var value1 = muzarSelect.value;
+    var value2 = nihulSelect.value;
+
+
+        // Call your function if both values are selected
+        getMaslul(value1, value2);
+    
+});
+
+document.getElementById('management-type').addEventListener('mousedown', function() {
+    // Get the updated elements' values
+    var muzarSelect = document.getElementById('product');
+    var nihulSelect = document.getElementById('management-type');
+    
+    var value1 = muzarSelect.value;
+    var value2 = nihulSelect.value;
+
+ 
+        getMaslul(value1, value2);
+    
+});
+
+
+
 function getMaslul(x,y) {
+   // Check if either of the select fields is empty
+    if (value1 === "" || value2 === "") {
+        return;
+    } else {
+        
+
+    
  // קורא נתונים מקובץ    
     fetch('data.txt')
         .then(response => response.text())
@@ -126,16 +164,17 @@ function getMaslul(x,y) {
 });
 
 });
+    }
 }  
 
 
 // add a new option
 function addOption(value, text) {
     // Get the select element
-    const select = document.getElementById('maslul-type');
+    var select = document.getElementById('maslul-type');
 
     // Create a new option element
-    const newOption = document.createElement('option');
+    var newOption = document.createElement('option');
     newOption.value = value;
     newOption.textContent = value+ "-" +text;
 
