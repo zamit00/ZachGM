@@ -40,36 +40,36 @@ function getMaslul(x, y) {
           let fieldRashi = data.split('maslulend'); 
           fieldRashi.forEach(function(item) {
            if (y===x){
-              if (item.includes(x) && item.includes(y)) {
               let fields = item.split(',');
+              if (fields[3].includes(x) && item.includes(y)) {
               addOption(fields[1], fields[2]);
              }  
            }   
 
           if (y==="אקטיבי"){
-              if (item.includes(x) && (item.includes(act1) || item.includes(act2) || item.includes(act3)
-               || item.includes(act4) || item.includes(act5) || item.includes(act6))) {
               let fields = item.split(',');
+              if (fields[3].includes(x) && (fields[6].includes(act1) || fields[6].includes(act2) || fields[6].includes(act3)
+               || fields[6].includes(act4) || fields[6].includes(act5) || fields[6].includes(act6))) {
               addOption(fields[1], fields[2]);
              }  
            }  
 
           if (y==="פאסיבי"){
-              if (item.includes(x) && (item.includes(act7) || item.includes(act8) )) {
               let fields = item.split(',');
+              if (fields[3].includes(x) && (fields[6].includes(act7) || fields[6].includes(act8) )) {
               addOption(fields[1], fields[2]);
              }  
            }  
           if (y==="קיימות"){
-              if (item.includes(x) && item.includes(act9) ) {
               let fields = item.split(',');
+              if (fields[3].includes(x) && fields[6].includes(act9) ) {
               addOption(fields[1], fields[2]);
              }  
            } 
 
           if (y==="הלכתי"){
-              if (item.includes(x) && item.includes(act10) ) {
               let fields = item.split(',');
+              if (fields[3].includes(x) && fields[6].includes(act10) ) {
               addOption(fields[1], fields[2]);
              }  
            } 
