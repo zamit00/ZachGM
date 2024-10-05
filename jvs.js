@@ -102,7 +102,7 @@ document.getElementById('product').addEventListener('focus', function() {
      let nihulSelect = document.getElementById('management-type').innerHTML;
     if (muzarSelect === "" || nihulSelect === "") { alert("נדרש לבחור סוג מוצר וסוג ניהול");
     return;}
-    else {document.getElementById('maslul-type').innerHTML="נבחר";}
+    else {document.getElementById('option-type').innerHTML="נבחר";}
 
 });
 
