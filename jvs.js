@@ -20,9 +20,7 @@ document.getElementById('mybutton').addEventListener('click', () => {
     }
 
 
-   if (isNaN(kupaID)) {
-    return;
-}
+   if (isNaN(kupaID)) { return;}
 
  // קורא נתונים מקובץ    
     fetch('data.txt')
@@ -30,7 +28,7 @@ document.getElementById('mybutton').addEventListener('click', () => {
         .then(data => {
             let searchString=`<${kupaID}>,`;
   //           if (isNaN(searchString)) {return;}
-}
+
             const startIndex = data.indexOf(searchString)+ searchString.length;
 
             if (startIndex === -1) return;
