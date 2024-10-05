@@ -48,7 +48,7 @@ function getMaslul(x, y) {
                         x===x;
                     }
                     else{  if (fields[3].includes(x) && item.includes(y)) {
-                   await addOption(fields[1], fields[2]);
+                    addOption(fields[1], fields[2]);
                      }                        
                     }
                 }
@@ -61,7 +61,7 @@ function getMaslul(x, y) {
                     }
                     else{        const actionsA = [act1, act2, act3, act4, act5, act6];
                             if (fields[3].includes(x) && actionsA.some(action => fields[5].includes(action))) {
-                         await addOption(fields[1], fields[2]);
+                          addOption(fields[1], fields[2]);
                              }                        
                     }
                 }
@@ -75,7 +75,7 @@ function getMaslul(x, y) {
                     }
                     else{ const actionsP = [act7, act8];
                           if (fields[3].includes(x) && actionsP.some(action => fields[5].includes(action))) {
-                           await addOption(fields[1], fields[2]);
+                            addOption(fields[1], fields[2]);
                              }                        
                     }
                 }
@@ -89,7 +89,7 @@ function getMaslul(x, y) {
                     }
                     else{ const actionsP = [act7, act8];
                            if (fields[3].includes(x) && fields[5].includes(act9) ) {
-                           await addOption(fields[1], fields[2]);
+                            addOption(fields[1], fields[2]);
                              }                        
                     }
                 }
@@ -102,7 +102,7 @@ function getMaslul(x, y) {
                         x===x;
                     }
                     else{ if (fields[3].includes(x) && fields[5].includes(act10) ) {
-                           await addOption(fields[1], fields[2]);
+                            addOption(fields[1], fields[2]);
                              }                        
                     }
                 }
