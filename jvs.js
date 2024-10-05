@@ -28,7 +28,7 @@ function getMaslul(x, y) {
         document.getElementById('maslul-type').innerHTML = '';
         const act1="מתמחים בניהול אקטיבי"; const act2="כללי";const act3 = "אג\"ח";
         const act4="מניות";const act5="שיקלי"; const act6="מתמחים באפיקי השקעה סחירים"; 
-
+        const act11="מודל חכ\"מ אחר";
         const act7="עוקבי מדדים"; const act8="מדד";
 
         const act9="קיימות"; 
@@ -49,7 +49,7 @@ function getMaslul(x, y) {
            }   
           if (y === "אקטיבי") {
     
-            const actionsA = [act1, act2, act3, act4, act5, act6];
+            const actionsA = [act1, act2, act3, act4, act5, act6,act11];
             if (fields[3].includes(x) && actionsA.some(action => fields[5].includes(action))) {
         addOption(fields[1], fields[2]);
     }
