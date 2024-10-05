@@ -91,8 +91,8 @@ if (!data.includes(searchString)) {
 });
 window.addEventListener('beforeunload', function (e) {
   // Custom logic to execute before the page unloads (e.g., on refresh)
-  e.preventDefault(); // Necessary for some browsers
-  e.returnValue = ''; // Required to trigger the confirmation dialog in some browsers
+ // e.preventDefault();  Necessary for some browsers
+  e.returnValue = null; // Required to trigger the confirmation dialog in some browsers
   document.getElementById('product').innerHTML = ""; 
 });
 
