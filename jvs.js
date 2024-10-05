@@ -44,7 +44,7 @@ function getMaslul(x, y) {
           let fields = item.split(',');              
            if (y===x){
                if(x==="קופת גמל להשקעה"){
-                    if (fields[3].includes(yeled){
+                    if (fields[3].includes(yeled)){
                         x===x;
                     }
                     else{  if (fields[3].includes(x) && item.includes(y)) {
@@ -56,7 +56,7 @@ function getMaslul(x, y) {
           if (y === "אקטיבי") {
 
                if(x==="קופת גמל להשקעה"){
-                    if (fields[3].includes(yeled){
+                    if (fields[3].includes(yeled)){
                         x===x;
                     }
                     else{        const actionsA = [act1, act2, act3, act4, act5, act6];
@@ -72,7 +72,7 @@ function getMaslul(x, y) {
 
           if (y==="פאסיבי"){ 
                if(x==="קופת גמל להשקעה"){
-                    if (fields[3].includes(yeled){
+                    if (fields[3].includes(yeled)){
                         x===x;
                     }
                     else{ const actionsP = [act7, act8];
@@ -91,7 +91,7 @@ function getMaslul(x, y) {
 
           if (y==="קיימות"){ 
              if(x==="קופת גמל להשקעה"){
-                    if (fields[3].includes(yeled){
+                    if (fields[3].includes(yeled)){
                         x===x;
                     }
                     else{ const actionsP = [act7, act8];
@@ -105,7 +105,7 @@ function getMaslul(x, y) {
 
           if (y==="הלכתי"){
              if(x==="קופת גמל להשקעה"){
-                    if (fields[3].includes(yeled){
+                    if (fields[3].includes(yeled)){
                         x===x;
                     }
                     else{ if (fields[3].includes(x) && fields[5].includes(act10) ) {
