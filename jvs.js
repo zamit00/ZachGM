@@ -1,7 +1,7 @@
 document.getElementById('product').addEventListener('change', handleSelectChange);
 document.getElementById('management-type').addEventListener('change', handleSelectChange);
 document.getElementById('maslul-type').addEventListener('mousedown', handleSelectChange);
-
+// --------------------------------------------------------------------------------------------
 function handleSelectChange() {
     let optButton = document.getElementById("optButton");
     optButton.value = ""; // Assign value
@@ -18,7 +18,7 @@ function handleSelectChange() {
         getMaslul(value1, value2);
     }
 }   
-
+// --------------------------------------------------------------------------------------------
 function getMaslul(x, y) {
     // Check if either of the select fields is empty
     if (x === "" || y === "") {
@@ -42,46 +42,41 @@ function getMaslul(x, y) {
           fieldRashi.forEach(function(item) {
           let fields = item.split(',');              
            if (y===x){
-              if (fields[3].match(new RegExp(x)) && item.includes(y)) {
+              if (fields[3].includes(x) && item.includes(y)) {
               addOption(fields[1], fields[2]);
-             } 
-               resolve();
+             }  
            }   
           if (y === "אקטיבי") {
     
             const actionsA = [act1, act2, act3, act4, act5, act6];
-            if (fields[3].match(new RegExp(x)) && actionsA.some(action => fields[5].includes(action))) {
-            addOption(fields[1], fields[2]);
-            }
-              resolve();
-           }  
+            if (fields[3].includes(x) && actionsA.some(action => fields[5].includes(action))) {
+        addOption(fields[1], fields[2]);
+    }
+}  
 
           if (y==="פאסיבי"){ 
                const actionsP = [act7, act8];
-              if (fields[3].match(new RegExp(x)) && actionsP.some(action => fields[5].includes(action))) {
+              if (fields[3].includes(x) && actionsP.some(action => fields[5].includes(action))) {
         addOption(fields[1], fields[2]);
-             } 
-              resolve();
+             }  
            }  
           if (y==="קיימות"){             
-              if (fields[3].match(new RegExp(x)) && fields[5].includes(act9) ) {
+              if (fields[3].includes(x) && fields[5].includes(act9) ) {
               addOption(fields[1], fields[2]);
-             }
-              resolve();
+             }  
            } 
 
           if (y==="הלכתי"){
-              if (fields[3].match(new RegExp(x)) && fields[5].includes(act10) ) {
+              if (fields[3].includes(x) && fields[5].includes(act10) ) {
               addOption(fields[1], fields[2]);
-             }
-              resolve();
+             }  
            } 
     
     }); 
     });
     }
 } 
-
+// --------------------------------------------------------------------------------------------
 // add a new option
 function addOption(value, text) {
     // Get the select element
@@ -95,7 +90,7 @@ function addOption(value, text) {
     // Append the new option to the select element
     select.appendChild(newOption);
 }
-
+// --------------------------------------------------------------------------------------------
 document.getElementById('maslul-type').addEventListener('change', function() {
     let muzarSelect = document.getElementById('maslul-type');
     let value1 = muzarSelect.options[muzarSelect.selectedIndex].value;
@@ -110,26 +105,18 @@ document.getElementById('maslul-type').addEventListener('change', function() {
     console.log(parseInt(document.getElementsByName("txt1")[0]?.value));
     });
 
-
-
-
-
-// אירוע שינוי בתיבת בחירה מוצר
-//document.addEventListener('DOMContentLoaded', function() {
- 
-//});
-
+// --------------------------------------------------------------------------------------------
 // אירוע מעבר למסך שני
 document.getElementById('goToPage2')?.addEventListener('click', () => {
     window.location.href = 'netunim.html';
 });
-
+// --------------------------------------------------------------------------------------------
 // אירוע חזרה למסך ראשי
 document.getElementById('goToPage1')?.addEventListener('click', () => {
     
     window.location.href = 'index.html';
 });
-
+// --------------------------------------------------------------------------------------------
 // אירוע הצג נתונים
 document.getElementById('mybutton').addEventListener('click', () => {
     let kupaID = parseInt(document.getElementsByName("txt1")[0]?.value);
@@ -197,25 +184,10 @@ if (!data.includes(searchString)) {
         })
         .catch(error => console.error('Error fetching the file:', error));
 });
+// --------------------------------------------------------------------------------------------
 window.addEventListener('beforeunload', function (e) {
   // Custom logic to execute before the page unloads (e.g., on refresh)
  // e.preventDefault();  Necessary for some browsers
   e.returnValue = null; // Required to trigger the confirmation dialog in some browsers
    
 });
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
