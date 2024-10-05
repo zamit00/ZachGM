@@ -1,3 +1,4 @@
+
 document.getElementById('product').addEventListener('change', handleSelectChange);
 document.getElementById('management-type').addEventListener('change', handleSelectChange);
 document.getElementById('maslul-type').addEventListener('mousedown', handleSelectChange);
@@ -31,8 +32,7 @@ function getMaslul(x, y) {
         const act7="עוקבי מדדים"; const act8="מדד";
 
         const act9="קיימות"; 
-        const act10="הלכתי"; 
-        const yeled="ילד";
+        const act10="הלכתי";      
      
  // קורא נתונים מקובץ    
        fetch('data.txt')
@@ -43,71 +43,36 @@ function getMaslul(x, y) {
           fieldRashi.forEach(function(item) {
           let fields = item.split(',');              
            if (y===x){
-               if(x==="קופת גמל להשקעה"){
-                    if (fields[3].includes(yeled)){
-                        x===x;
-                    }
-                    else{  if (fields[3].includes(x) && item.includes(y)) {
-                    addOption(fields[1], fields[2]);
-                     }                        
-                    }
-                }
-                       }   
+              if (fields[3].includes(x) && item.includes(y)) {
+              addOption(fields[1], fields[2]);
+             }  
+           }   
           if (y === "אקטיבי") {
-
-               if(x==="קופת גמל להשקעה"){
-                    if (fields[3].includes(yeled)){
-                        x===x;
-                    }
-                    else{        const actionsA = [act1, act2, act3, act4, act5, act6];
-                            if (fields[3].includes(x) && actionsA.some(action => fields[5].includes(action))) {
-                          addOption(fields[1], fields[2]);
-                             }                        
-                    }
-                }
-            }  
-
+    
+            const actionsA = [act1, act2, act3, act4, act5, act6];
+            if (fields[3].includes(x) && actionsA.some(action => fields[5].includes(action))) {
+        addOption(fields[1], fields[2]);
+    }
+}  
 
           if (y==="פאסיבי"){ 
-               if(x==="קופת גמל להשקעה"){
-                    if (fields[3].includes(yeled)){
-                        x===x;
-                    }
-                    else{ const actionsP = [act7, act8];
-                          if (fields[3].includes(x) && actionsP.some(action => fields[5].includes(action))) {
-                            addOption(fields[1], fields[2]);
-                             }                        
-                    }
-                }
-            }  
-
-
-          if (y==="קיימות"){ 
-             if(x==="קופת גמל להשקעה"){
-                    if (fields[3].includes(yeled)){
-                        x===x;
-                    }
-                    else{ const actionsP = [act7, act8];
-                           if (fields[3].includes(x) && fields[5].includes(act9) ) {
-                            addOption(fields[1], fields[2]);
-                             }                        
-                    }
-                }
-            } 
-
+               const actionsP = [act7, act8];
+              if (fields[3].includes(x) && actionsP.some(action => fields[5].includes(action))) {
+        addOption(fields[1], fields[2]);
+             }  
+           }  
+          if (y==="קיימות"){             
+              if (fields[3].includes(x) && fields[5].includes(act9) ) {
+              addOption(fields[1], fields[2]);
+             }  
+           } 
 
           if (y==="הלכתי"){
-             if(x==="קופת גמל להשקעה"){
-                    if (fields[3].includes(yeled)){
-                        x===x;
-                    }
-                    else{ if (fields[3].includes(x) && fields[5].includes(act10) ) {
-                            addOption(fields[1], fields[2]);
-                             }                        
-                    }
-                }
-            } 
-
+              if (fields[3].includes(x) && fields[5].includes(act10) ) {
+              addOption(fields[1], fields[2]);
+             }  
+           } 
+    
     }); 
     });
     }
