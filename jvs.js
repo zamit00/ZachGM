@@ -167,6 +167,14 @@ function addOption(value, text) {
 
 
 
+document.getElementById('maslul-type').addEventListener('change', function() {
+    
+    const muzarSelect = document.getElementById('maslul-type');
+    var value1 = muzarSelect.options[muzarSelect.selectedIndex].value;
+    var varsplit = value1.split(' - ');
+    document.getElementsByName("txt1").value=varsplit[0];
+    console.log(parseInt(document.getElementsByName("txt1")[0]?.value));
+    });
 
 
 
