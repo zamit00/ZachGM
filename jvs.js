@@ -96,7 +96,7 @@ window.addEventListener('beforeunload', function (e) {
   document.getElementById('product').innerHTML = ""; 
 });
 //בחירת מסלול
-document.getElementById('product').addEventListener('focus', function() {
+document.getElementById('option-type').addEventListener('focus', function() {
     console.log("Select box opened");
     let muzarSelect= document.getElementById('product').innerHTML;
      let nihulSelect = document.getElementById('management-type').innerHTML;
