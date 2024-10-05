@@ -34,6 +34,7 @@ function getMaslul(x,y) {
     if (x === "" || y === "") {
         return;
     } else {
+        document.getElementById('maslul-type').innerHTML = '';
         const act1="מתמחים בניהול אקטיבי"; const act2="כללי";const act3 = "אג\"ח";
         const act4="מניות";const act5="שיקלי"; const act6="מתמחים באפיקי השקעה סחירים"; 
 
