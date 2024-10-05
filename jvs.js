@@ -28,7 +28,7 @@ document.getElementById('mybutton').addEventListener('click', () => {
         .then(data => {
             let searchString=`<${kupaID}>,`;
             console.log(searchString);
-            if(isNaN(searchString)) return;
+    
             const startIndex = data.indexOf(searchString)+ searchString.length;
 
             if (startIndex === -1) return;
