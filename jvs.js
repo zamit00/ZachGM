@@ -98,8 +98,8 @@ window.addEventListener('beforeunload', function (e) {
 //בחירת מסלול
 document.getElementById('option-type').addEventListener('focus', function() {
     console.log("Select box opened");
-    let muzarSelect= document.getElementById('product').innerHTML;
-     let nihulSelect = document.getElementById('management-type').innerHTML;
+    let muzarSelect= document.getElementById('product').value;
+     let nihulSelect = document.getElementById('management-type').value;
     if (muzarSelect === "" || nihulSelect === "") { alert("נדרש לבחור סוג מוצר וסוג ניהול");
     return;}
     else {document.getElementById('option-type').innerHTML="נבחר";}
