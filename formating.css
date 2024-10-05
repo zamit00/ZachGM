@@ -3,7 +3,7 @@
 .muzar {margin: 15px;}
 #product{margin-right: 30px;height: 25px;width: 250px;}
 #management-type{margin-right: 7px;height: 25px;width: 250px;}
-#maslul-type{margin-right: 25px;height: 25px;min-width: 300px;}
+#maslul-type{margin-right: 25px;height: 25px;max-width: 350px;}
 
 #maslul-type {
   appearance: none;  /* Removes default mobile styling */
