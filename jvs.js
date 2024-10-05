@@ -2,12 +2,25 @@
 // אירוע שינוי בתיבת בחירה מוצר
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('product').addEventListener('change', function() {
-        var selectedValue = this.value;
-        console.log("You selected: " + selectedValue);
+    const muzarSelect = document.getElementById('product');
+    const nihulSelect = document.getElementById('management-type');
+    
+    const value1 = muzarSelect.value;
+    const value2 = nihulSelect.value;
+
+
+        // Call your function if both values are selected
+        getMaslul(value1, value2);
     });
     document.getElementById('management-type').addEventListener('change', function() {
-        var selectedManage = this.value;
-        console.log("You selected: " + selectedManage);
+    const muzarSelect = document.getElementById('product');
+    const nihulSelect = document.getElementById('management-type');
+    
+    const value1 = muzarSelect.value;
+    const value2 = nihulSelect.value;
+        // Call your function if both values are selected
+        getMaslul(value1, value2);
+        
     });
 });
 
@@ -109,36 +122,6 @@ document.getElementById('maslul-type').addEventListener('mousedown', function() 
         getMaslul(value1,value2);
     }
 });
-
-
-// שינוי בבחירה
-document.getElementById('product').addEventListener('change', function() {
-    // Get the updated elements' values
-    var muzarSelect = document.getElementById('product');
-    var nihulSelect = document.getElementById('management-type');
-    
-    var value1 = muzarSelect.value;
-    var value2 = nihulSelect.value;
-
-
-        // Call your function if both values are selected
-        getMaslul(value1, value2);
-    
-});
-
-document.getElementById('management-type').addEventListener('mousedown', function() {
-    // Get the updated elements' values
-    var muzarSelect = document.getElementById('product');
-    var nihulSelect = document.getElementById('management-type');
-    
-    var value1 = muzarSelect.value;
-    var value2 = nihulSelect.value;
-
- 
-        getMaslul(value1, value2);
-    
-});
-
 
 
 function getMaslul(x,y) {
