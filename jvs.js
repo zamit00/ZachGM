@@ -2,6 +2,7 @@
 document.getElementById('product').addEventListener('change', handleSelectChange);
 document.getElementById('management-type').addEventListener('change', handleSelectChange);
 document.getElementById('maslul-type').addEventListener('mousedown', handleSelectChange);
+document.getElementById('maslul-type').addEventListener('touchstart', handleSelectChange);
 // --------------------------------------------------------------------------------------------
 function handleSelectChange() {
     let optButton = document.getElementById("optButton");
