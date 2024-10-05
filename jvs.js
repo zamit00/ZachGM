@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
         var selectedValue = this.value;
         console.log("You selected: " + selectedValue);
     });
+    document.getElementById('management-type').addEventListener('change', function() {
+        var selectedManage = this.value;
+        console.log("You selected: " + selectedManage);
+    });
 });
 
 // אירוע מעבר למסך שני
