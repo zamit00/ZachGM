@@ -1,33 +1,33 @@
+document.getElementById('product').addEventListener('change', handleSelectChange);
+document.getElementById('management-type').addEventListener('change', handleSelectChange);
+document.getElementById('maslul-type').addEventListener('mousedown', handleSelectChange);
+
+function handleSelectChange() {
+    const muzarSelect = document.getElementById('product');
+    const nihulSelect = document.getElementById('management-type');
+    
+    const value1 = muzarSelect.value;
+    const value2 = nihulSelect.value;
+
+    // Only call the function if both values are selected (non-empty)
+    if (value1 !== "" && value2 !== "") {
+        getMaslul(value1, value2);
+    }
+}
+
+
+
+
+
+
+
+
+
 
 // אירוע שינוי בתיבת בחירה מוצר
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('product').addEventListener('change', function() {
-    const muzarSelect = document.getElementById('product');
-    const nihulSelect = document.getElementById('management-type');
-    
-    const value1 = muzarSelect.value;
-    const value2 = nihulSelect.value;
-
-
-        // Call your function if both values are selected
-        getMaslul(value1, value2);
-    });
-    document.getElementById('management-type').addEventListener('change', function() {
-    const muzarSelect = document.getElementById('product');
-    const nihulSelect = document.getElementById('management-type');
-    
-    const value1 = muzarSelect.value;
-
-    if (nihulSelect.value==="ללא העדפה") {
-    const value2 = muzarSelect.value;
-} else {
-    const value2 = nihulSelect.value;
-}
-        // Call your function if both values are selected
-        getMaslul(value1, value2);
-        
-    });
-});
+//document.addEventListener('DOMContentLoaded', function() {
+ 
+//});
 
 // אירוע מעבר למסך שני
 document.getElementById('goToPage2')?.addEventListener('click', () => {
@@ -113,20 +113,7 @@ window.addEventListener('beforeunload', function (e) {
   e.returnValue = null; // Required to trigger the confirmation dialog in some browsers
    
 });
-//בחירת מסלול
-document.getElementById('maslul-type').addEventListener('mousedown', function() {
-    const muzarSelect = document.getElementById('product');
-    const nihulSelect = document.getElementById('management-type');
-    const value1 = muzarSelect.value;
-    const value2 = nihulSelect.value;
 
-    if (value1 === "" || value2 === "") {
-        alert("נדרש לבחור סוג מוצר וסוג ניהול");
-    } else {
-        // If both are selected, log the values
-        getMaslul(value1,value2);
-    }
-});
 
 
 function getMaslul(x,y) {
@@ -134,9 +121,7 @@ function getMaslul(x,y) {
     if (x === "" || y === "") {
         return;
     } else {
-        
-
-    
+     
  // קורא נתונים מקובץ    
     fetch('data.txt')
         .then(response => response.text())
