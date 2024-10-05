@@ -7,7 +7,13 @@ function handleSelectChange() {
     const nihulSelect = document.getElementById('management-type');
     
     const value1 = muzarSelect.value;
-    const value2 = nihulSelect.value;
+    let value2;
+
+    if (nihulSelect.value === "ללא העדפה") {
+            value2 = muzarSelect.value;  // Assign value2 from muzarSelect if condition is met
+        } else {
+            value2 = nihulSelect.value;  // Otherwise, assign it from nihulSelect
+        }
 
     // Only call the function if both values are selected (non-empty)
     if (value1 !== "" && value2 !== "") {
