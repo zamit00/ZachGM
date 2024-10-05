@@ -49,25 +49,25 @@ function getMaslul(x, y) {
           if (y === "אקטיבי") {
     
             const actionsA = [act1, act2, act3, act4, act5, act6];
-            if (fields[3].includes(x) && actionsA.some(action => fields[6].includes(action))) {
+            if (fields[3].includes(x) && actionsA.some(action => fields[5].includes(action))) {
         addOption(fields[1], fields[2]);
     }
 }  
 
           if (y==="פאסיבי"){ 
                const actionsP = [act7, act8];
-              if (fields[3].includes(x) && actionsP.some(action => fields[6].includes(action))) {
+              if (fields[3].includes(x) && actionsP.some(action => fields[5].includes(action))) {
         addOption(fields[1], fields[2]);
              }  
            }  
           if (y==="קיימות"){             
-              if (fields[3].includes(x) && fields[6].includes(act9) ) {
+              if (fields[3].includes(x) && fields[5].includes(act9) ) {
               addOption(fields[1], fields[2]);
              }  
            } 
 
           if (y==="הלכתי"){
-              if (fields[3].includes(x) && fields[6].includes(act10) ) {
+              if (fields[3].includes(x) && fields[5].includes(act10) ) {
               addOption(fields[1], fields[2]);
              }  
            } 
