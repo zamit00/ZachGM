@@ -27,7 +27,7 @@ document.getElementById('mybutton').addEventListener('click', () => {
         .then(response => response.text())
         .then(data => {
             let searchString=`<${kupaID}>,`;
-  //           if (isNaN(searchString)) {return;}
+
 
             const startIndex = data.indexOf(searchString)+ searchString.length;
 
@@ -36,6 +36,7 @@ document.getElementById('mybutton').addEventListener('click', () => {
             let allString = data.substring(startIndex); 
 
             let fields = allString.split(',');
+            if (isNaN(Number(fields[6] || 0).toLocaleString())) {return;}
 // ממלא שדות נתונים בטבלאות
             document.getElementById('output1').textContent = fields[0] || '';
             document.getElementById('output2').textContent = fields[1] || '';
