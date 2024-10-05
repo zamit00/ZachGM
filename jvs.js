@@ -3,34 +3,24 @@ document.getElementById('management-type').addEventListener('change', handleSele
 document.getElementById('maslul-type').addEventListener('mousedown', handleSelectChange);
 
 function handleSelectChange() {
-  
-       let optButton = document.getElementById("optButton");
-       optButton.value = ""; // Assign value
-       optButton.textContent = ""; // Assign text
-    
-        let  muzarSelect; let nihulSelect;
-        muzarSelect = document.getElementById('product');
-        nihulSelect = document.getElementById('management-type');
+    let optButton = document.getElementById("optButton");
+    optButton.value = ""; // Assign value
+    optButton.textContent = ""; // Assign text
 
-        let value1;let value2;
-        value1 = muzarSelect.value;
-        if (nihulSelect.value === "ללא העדפה") {
-            value2 = muzarSelect.value;  // Assign value2 from muzarSelect if condition is met
-            } else {
-        
-            value2 = nihulSelect.value;  // Otherwise, assign it from nihulSelect
-        }
+    let muzarSelect = document.getElementById('product');
+    let nihulSelect = document.getElementById('management-type');
+
+    let value1 = muzarSelect.value;
+    let value2 = nihulSelect.value === "ללא העדפה" ? muzarSelect.value : nihulSelect.value;
 
     // Only call the function if both values are selected (non-empty)
-        if (value1 !== "" && value2 !== "") {
-            getMaslul(value1, value2);
-        }
-       
-  
-}    
+    if (value1 !== "" && value2 !== "") {
+        getMaslul(value1, value2);
+    }
+}   
 
-function getMaslul(x,y) {
-   // Check if either of the select fields is empty
+function getMaslul(x, y) {
+    // Check if either of the select fields is empty
     if (x === "" || y === "") {
         return;
     } else {
@@ -44,45 +34,45 @@ function getMaslul(x,y) {
         const act10="הלכתי";      
      
  // קורא נתונים מקובץ    
-    fetch('data.txt')
-        .then(response => response.text())
-        .then(data => {
-    let fieldRashi = data.split('maslulend'); 
-    fieldRashi.forEach(function(item, index) {
-     if (y===x){
-            if (item.includes(x) && item.includes(y)) {
-            let fields = item.split(',');
-            addOption(fields[1], fields[2]);
-           }  
-     }   
+       fetch('data.txt')
+          .then(response => response.text())
+          .then(data => {
+          let fieldRashi = data.split('maslulend'); 
+          fieldRashi.forEach(function(item) {
+           if (y===x){
+              if (item.includes(x) && item.includes(y)) {
+              let fields = item.split(',');
+              addOption(fields[1], fields[2]);
+             }  
+           }   
 
-    if (y==="אקטיבי"){
-            if (item.includes(x) && (item.includes(act1) || item.includes(act2) || item.includes(act3)
-             || item.includes(act4) || item.includes(act5) || item.includes(act6))) {
-            let fields = item.split(',');
-            addOption(fields[1], fields[2]);
+          if (y==="אקטיבי"){
+              if (item.includes(x) && (item.includes(act1) || item.includes(act2) || item.includes(act3)
+               || item.includes(act4) || item.includes(act5) || item.includes(act6))) {
+              let fields = item.split(',');
+              addOption(fields[1], fields[2]);
+             }  
            }  
-     }  
 
-    if (y==="פאסיבי"){
-            if (item.includes(x) && (item.includes(act7) || item.includes(act8) )) {
-            let fields = item.split(',');
-            addOption(fields[1], fields[2]);
+          if (y==="פאסיבי"){
+              if (item.includes(x) && (item.includes(act7) || item.includes(act8) )) {
+              let fields = item.split(',');
+              addOption(fields[1], fields[2]);
+             }  
            }  
-     }  
-    if (y==="קיימות"){
-            if (item.includes(x) && item.includes(act9) ) {
-            let fields = item.split(',');
-            addOption(fields[1], fields[2]);
-           }  
-     } 
+          if (y==="קיימות"){
+              if (item.includes(x) && item.includes(act9) ) {
+              let fields = item.split(',');
+              addOption(fields[1], fields[2]);
+             }  
+           } 
 
-    if (y==="הלכתי"){
-            if (item.includes(x) && item.includes(act10) ) {
-            let fields = item.split(',');
-            addOption(fields[1], fields[2]);
-           }  
-     } 
+          if (y==="הלכתי"){
+              if (item.includes(x) && item.includes(act10) ) {
+              let fields = item.split(',');
+              addOption(fields[1], fields[2]);
+             }  
+           } 
     
     }); 
     });
