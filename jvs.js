@@ -288,12 +288,15 @@ function sortData() {
   
   optionCollection.forEach((option,index) => {if (index < 5){
 
-    const paragraph = document.getElementById('p' + index);
-            
-            if (paragraph) {
-                paragraph.textContent = "המסלול "  + option.text + "  " + "תשואה ל - 12 חודשים: " + option.value + "%";
+    const maslult = document.getElementById('mas' + index);
+    const tsuabest = document.getElementById('tas' + index);        
+            if (maslult) {
+              
+               maslult.textContent = option.text;
+              tsuabest.textContent = option.value + "%";
             }
-    else{console.log('ERROR');}
+              
+            else{console.log('ERROR');}
   }
   });
 }
