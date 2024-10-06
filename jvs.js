@@ -32,8 +32,8 @@ if (selectElement.options.length === 0) {
     myElement3.style.display = 'none';
      
   for (let i = 0; i<5;i++){
-  const maslult = document.getElementById('mas' + index);
-  const tsuabest = document.getElementById('tas' + index);
+  const maslult = document.getElementById('mas' + i);
+  const tsuabest = document.getElementById('tas' + i);
     maslul.textContent='';
     tsuabest.textContent='';
 
@@ -44,7 +44,13 @@ if (selectElement.options.length === 0) {
 
 function handleSelectChange() {
    
-    
+for (let i = 0; i<5;i++){
+  const maslult = document.getElementById('mas' + i);
+  const tsuabest = document.getElementById('tas' + i);
+    maslul.textContent='';
+    tsuabest.textContent='';
+
+  }
           const myElement1 = document.getElementById('allthetables1');
           myElement1.style.display = 'none';
           const myElement2 = document.getElementById('allthetables2');
