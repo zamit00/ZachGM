@@ -34,6 +34,20 @@ function getMaslul(x, y) {
 
         const act9="קיימות"; 
         const act10="הלכתי";      
+
+// בודק בחירת חשיפות ----------------------------------------------------------------------------
+        const selectedExposure1 = document.querySelector('input[name="exposure1"]:checked');
+        const selectedExposure2 = document.querySelector('input[name="exposure2"]:checked');
+        const selectedExposure3 = document.querySelector('input[name="exposure3"]:checked');
+        const selectedExposure4 = document.querySelector('input[name="exposure4"]:checked');
+    
+    
+        console.log("Selected exposure1: " + selectedExposure1.value);
+        console.log("Selected exposure2: " + selectedExposure2.value);
+        console.log("Selected exposure3: " + selectedExposure3.value);
+        console.log("Selected exposure4: " + selectedExposure4.value);
+// --------------------------------------------------------------------------------------------
+
      
  // קורא נתונים מקובץ    
        fetch('data.txt')
@@ -176,4 +190,6 @@ if (!data.includes(searchString)) {
         })
         .catch(error => console.error('Error fetching the file:', error));
 });
+
+
 
