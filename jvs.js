@@ -161,6 +161,7 @@ function addOption(value, text) {
     // Create a new option element
     var newOption = document.createElement('option');
     newOption.value = value;
+    newOption.id = value;
     newOption.textContent = value+ "-" +text;
 
     // Append the new option to the select element
@@ -169,7 +170,7 @@ function addOption(value, text) {
 // --------------------------------------------------------------------------------------------
 document.getElementById('maslul-type').addEventListener('change', function() {
     let muzarSelect = document.getElementById('maslul-type');
-    let value1 = muzarSelect.options[muzarSelect.selectedIndex].value;
+    let value1 = muzarSelect.options[muzarSelect.selectedIndex].id;
     console.log(value1);
     let varsplit = value1.split('-');
     console.log(varsplit[0]);
@@ -251,5 +252,30 @@ if (!data.includes(searchString)) {
         .catch(error => console.error('Error fetching the file:', error));
 });
 
+
+function sortData() {
+  // Get the select element
+  const selectElement = document.getElementById('product');
+
+  // Create an empty array to store the options
+  let optionCollection = [];
+
+  // Loop through each option and add it to the collection
+  for (let i = 0; i < selectElement.options.length; i++) {
+      let value = parseInt(selectElement.options[i].value); // Convert value to an integer
+      let text = selectElement.options[i].text; // Get the corresponding option text
+      optionCollection.push({ value: value, text: text }); // Store both value and text in an object
+  }
+  
+  // Sort the collection from bigger to smaller based on value
+  optionCollection.sort((a, b) => b.value - a.value); // Sort the objects in descending order by value
+
+  console.log("Sorted options:");
+
+  // Loop through the sorted array and log each option text based on the sorted values
+  optionCollection.forEach(option => {
+      console.log(option.text); // Log each option text in sorted order
+  });
+};
 
 
