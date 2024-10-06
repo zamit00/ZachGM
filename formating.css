@@ -4,7 +4,7 @@
   width: 100%; /* שיגדל לפי רוחב המיכל */
   max-width: 800px; /* הגבלת רוחב מקסימלי ל-850 פיקסלים */
   height: auto; /* גובה יותאם לתוכן */
-  ackground-color:rgb(147, 185, 114);
+  background-color:rgb(147, 185, 114);
 }
 
 /*.radio-group {max-width: 750px;display: flex; height: 25px;padding: 5px;border: 1px solid rgb(70, 70, 75); background-color: rgb(226, 226, 234); color: rgb(3, 3, 1);font-size: larger;}*/
