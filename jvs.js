@@ -73,10 +73,10 @@ switch (selectedExposure4) {
 }
         
         
-        console.log(safDown1 + " " + safUp1);
-        console.log(safDown2 + " " + safUp2);
-        console.log(safDown3 + " " + safUp3);
-        console.log(safDown4 + " " + safUp4);
+        console.log(`Exposure: ${exposure1}, safDown: ${safDown1}, safUp: ${safUp1}`);
+        console.log(`Exposure: ${exposure2}, safDown: ${safDown2}, safUp: ${safUp2}`);
+        console.log(`Exposure: ${exposure3}, safDown: ${safDown3}, safUp: ${safUp3}`);
+        console.log(`Exposure: ${exposure4}, safDown: ${safDown4}, safUp: ${safUp4}`);
 // --------------------------------------------------------------------------------------------
 
      
