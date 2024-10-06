@@ -249,6 +249,8 @@ let kupaID = kupanumber;
             let searchString=`<${kupaID}>,`;
 
 if (!data.includes(searchString)) {
+
+  console.log("ERROR FUNCTION");
     return; // Exit the function if searchString is not found in the content
 }
 
