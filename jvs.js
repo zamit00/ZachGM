@@ -233,9 +233,9 @@ function performAction(itemNumber) {
 }
   
 function maslulselect(){
-      
-    const maslulItem=document.getElementById('maslul-type').textContent;
-     let varsplit = maslulItem.split('-');
+    const selectElement = document.getElementById('maslul-type'); // Get the select element
+    const selectedText = selectElement.options[selectElement.selectedIndex].text; 
+     let varsplit = selectedText.split('-');
       let kupaID = parseInt(varsplit[0]);
       
   perform(kupaID);
