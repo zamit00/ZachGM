@@ -274,7 +274,7 @@ function sortData() {
   // Loop through the sorted array and log each option text based on the sorted values
   optionCollection.forEach((option,index) => {if (index < 5){
 
-    document.getElementById(`p${index+1}`).textContent =
+    document.getElementById(`p${index}`).textContent =
       option.text , " - ", option.value+"%" ;} 
   });
 };
