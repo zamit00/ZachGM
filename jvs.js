@@ -291,7 +291,7 @@ function sortData() {
     const paragraph = document.getElementById('p' + index);
             
             if (paragraph) {
-                paragraph.textContent = "המסלול "  + option.text + "  " + "תשואה ל - 12 חודשים: "  option.value + "%";
+                paragraph.textContent = "המסלול "  + option.text + "  " + "תשואה ל - 12 חודשים: " + option.value + "%";
             }
     else{console.log('ERROR');}
   }
