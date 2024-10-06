@@ -1,7 +1,7 @@
 .hasifa {margin-right: 10px;}
-#mas1,#mas2,#mas3,#mas4,#mas5,#maskot{width:400px;height: 20px;border: 1px solid black;
+#mas1,#mas2,#mas3,#mas4,#mas0,#maskot{width:400px;height: 20px;border: 1px solid black;
                                       vertical-align: middle;font-size:10px;text-align:auto;}
-#tas1,#tas2,#tas3,#tas4,#tas5,#taskot{width:250px;height: 20px;border: 1px solid black;
+#tas1,#tas2,#tas3,#tas4,#tas0,#taskot{width:250px;height: 20px;border: 1px solid black;
                                       vertical-align: middle;font-size:10px;;text-align:auto;}
 #maskot,#taskot{background-color: blue;color: white;}
 #tblt{border: 1px solid black;}
