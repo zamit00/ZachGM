@@ -274,7 +274,7 @@ function sortData() {
 
   // Loop through the sorted array and log each option text based on the sorted values
   optionCollection.forEach(option => {
-      console.log(option.text); // Log each option text in sorted order
+      console.log(option.text , " - ", option.value+"%" ); // Log each option text in sorted order
   });
 };
 
