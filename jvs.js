@@ -102,7 +102,7 @@ function getMaslul(x, y) {
                   if (fields[3].includes(x) && item.includes(y) && fields[41]>= safDown1
                    && fields[41]< safUp1  && fields[43]>= safDown2 && fields[43]< safUp2  && fields[33]>= safDown3
                    && fields[33]< safUp3  && fields[45]>= safDown4 && fields[45]< safUp4) {
-                  addOption(fields[1], fields[2]);
+                  addOption(fields[1], fields[2],fields[8]);
                  } 
             }
            }   
@@ -113,7 +113,7 @@ function getMaslul(x, y) {
                 if (fields[3].includes(x) && actionsA.some(action => fields[5].includes(action)) && fields[41]>= safDown1
                    && fields[41]< safUp1  && fields[43]>= safDown2 && fields[43]< safUp2  && fields[33]>= safDown3
                    && fields[33]< safUp3  && fields[45]>= safDown4 && fields[45]< safUp4) {
-                addOption(fields[1], fields[2]);
+                addOption(fields[1], fields[2],fields[8]);
                 }
             }
         }  
@@ -124,7 +124,7 @@ function getMaslul(x, y) {
                   if (fields[3].includes(x) && actionsP.some(action => fields[5].includes(action)) && fields[41]>= safDown1
                    && fields[41]< safUp1  && fields[43]>= safDown2 && fields[43]< safUp2  && fields[33]>= safDown3
                    && fields[33]< safUp3  && fields[45]>= safDown4 && fields[45]< safUp4) {
-                addOption(fields[1], fields[2]);
+                addOption(fields[1], fields[2],fields[8]);
                  }  
                }
           }
@@ -133,7 +133,7 @@ function getMaslul(x, y) {
                   if (fields[3].includes(x) && fields[5].includes(act9) && fields[41]>= safDown1
                    && fields[41]< safUp1  && fields[43]>= safDown2 && fields[43]< safUp2  && fields[33]>= safDown3
                    && fields[33]< safUp3  && fields[45]>= safDown4 && fields[45]< safUp4 ) {
-                  addOption(fields[1], fields[2]);
+                  addOption(fields[1], fields[2],fields[8]);
                  }  
                }
           }
@@ -143,7 +143,7 @@ function getMaslul(x, y) {
                   if (fields[3].includes(x) && fields[5].includes(act10) && fields[41]>= safDown1
                    && fields[41]< safUp1  && fields[43]>= safDown2 && fields[43]< safUp2  && fields[33]>= safDown3
                    && fields[33]< safUp3  && fields[45]>= safDown4 && fields[45]< safUp4) {
-                  addOption(fields[1], fields[2]);
+                  addOption(fields[1], fields[2],fields[8]);
                  }  
                }
           }
@@ -154,16 +154,16 @@ function getMaslul(x, y) {
 } 
 // --------------------------------------------------------------------------------------------
 // add a new option
-function addOption(value, text) {
+function addOption(value, text,tesua) {
     // Get the select element
     var select = document.getElementById('maslul-type');
     
     // Create a new option element
     var newOption = document.createElement('option');
-    newOption.value = value;
+    newOption.value = tesua;
     newOption.id = value;
     newOption.textContent = value+ "-" +text;
-
+    console.log(tesua);
     // Append the new option to the select element
     select.appendChild(newOption);
 }
@@ -171,7 +171,7 @@ function addOption(value, text) {
 document.getElementById('maslul-type').addEventListener('change', function() {
     let muzarSelect = document.getElementById('maslul-type');
     let value1 = muzarSelect.options[muzarSelect.selectedIndex].id;
-    console.log(value1);
+    //console.log(value1);
     //let varsplit = value1.split('-');
     //console.log(varsplit[0]);
 
@@ -179,7 +179,7 @@ document.getElementById('maslul-type').addEventListener('change', function() {
     let optButton = document.getElementById("optButton");
     optButton.value =value1; // Assign value
     optButton.textContent = value1; // Assign text
-    console.log(parseInt(document.getElementsByName("txt1")[0]?.value));
+    //console.log(parseInt(document.getElementsByName("txt1")[0]?.value));
     });
 
 
