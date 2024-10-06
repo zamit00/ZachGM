@@ -1,8 +1,8 @@
 .alltables{ display: none;}
 .hasifa {margin-right: 10px;}
-#mas1,#mas2,#mas3,#mas4,#mas0,#maskot{width:450px;height: 25px;border: 1px solid black;
+#mas1,#mas2,#mas3,#mas4,#mas0,#maskot{width:410px;height: 25px;border: 1px solid black;
                                       vertical-align: middle;font-size:17px;text-align:auto;}
-#tas1,#tas2,#tas3,#tas4,#tas0,#taskot{width:200px;height: 25px;border: 1px solid black;
+#tas1,#tas2,#tas3,#tas4,#tas0,#taskot{width:240px;height: 25px;border: 1px solid black;
                                       vertical-align: middle;font-size:17px;;text-align:center;}
 #maskot,#taskot{background-color: blue;color: white;}
 #tblt{border: 1px solid black;}
