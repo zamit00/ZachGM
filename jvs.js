@@ -285,12 +285,13 @@ function sortData() {
   console.log("Sorted options:");
 
   // Loop through the sorted array and log each option text based on the sorted values
+  
   optionCollection.forEach((option,index) => {if (index < 5){
 
     const paragraph = document.getElementById('p' + index);
             
             if (paragraph) {
-                paragraph.textContent = option.text + " - " + option.value + "%";
+                paragraph.textContent = "המסלול "  + option.text + "  " + "תשואה ל - 12 חודשים: "  option.value + "%";
             }
     else{console.log('ERROR');}
   }
