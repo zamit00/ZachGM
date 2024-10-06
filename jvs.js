@@ -274,8 +274,11 @@ function sortData() {
   // Loop through the sorted array and log each option text based on the sorted values
   optionCollection.forEach((option,index) => {if (index < 5){
 
-    const par1= document.getElementById('p1'); 
-    par1.textContent = option.text + " - " + option.value + "%" ;} 
+    const paragraph = document.getElementById('p' + index);
+            
+            if (paragraph) {
+                paragraph.textContent = option.text + " - " + option.value + "%";
+            } 
   });
 };
 
