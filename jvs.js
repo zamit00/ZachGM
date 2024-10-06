@@ -45,31 +45,34 @@ function getMaslul(x, y) {
         const selectedExposure3 = document.querySelector('input[name="exposure3"]:checked');
         const selectedExposure4 = document.querySelector('input[name="exposure4"]:checked');
         
-
+let safDown1, safUp1;
+let safDown2, safUp2;
+let safDown3, safUp3;
+let safDown4, safUp4;
 
 switch (selectedExposure1) {
-  case "אין העדפה": const safDown1 = 0; const safUp1 = 1.1;  break;
-  case "מוגבר": const safDown1 = 0.6; const safUp1 = 1.1;    break;
-  case "בינוני": const safDown1 = 0.3; const safUp1 = 0.6;    break;
-  case "מועט": const safDown1 = 0;   const safUp1 = 0.3;    break;
+  case "אין העדפה":  safDown1 = 0;   safUp1 = 1.1;  break;
+  case "מוגבר":     safDown1 = 0.6;  safUp1 = 1.1;    break;
+  case "בינוני":     safDown1 = 0.3;  safUp1 = 0.6;    break;
+  case "מועט":      safDown1 = 0;    safUp1 = 0.3;    break;
 }
 switch (selectedExposure2) {
-  case "אין העדפה": const safDown2 = 0; const safUp2 = 1.1;  break;
-  case "מוגבר": const safDown2 = 0.6; const safUp2 = 1.1;    break;
-  case "בינוני": const safDown2 = 0.3; const safUp2 = 0.6;    break;
-  case "מועט": const safDown2 = 0;   const safUp2 = 0.3;    break;
+  case "אין העדפה":  safDown2 = 0;    safUp2 = 1.1;  break;
+  case "מוגבר":     safDown2 = 0.6;  safUp2 = 1.1;    break;
+  case "בינוני":     safDown2 = 0.3;  safUp2 = 0.6;    break;
+  case "מועט":      safDown2 = 0;    safUp2 = 0.3;    break;
 }
 switch (selectedExposure3) {
-  case "אין העדפה": const safDown3 = 0; const safUp3 = 1.1;  break;
-  case "מוגבר": const safDown3 = 0.6; const safUp3 = 1.1;    break;
-  case "בינוני": const safDown3 = 0.3; const safUp3 = 0.6;    break;
-  case "מועט": const safDown3 = 0;   const safUp3 = 0.3;    break;
+  case "אין העדפה":  safDown3 = 0;    safUp3 = 1.1;  break;
+  case "מוגבר":     safDown3 = 0.6;  safUp3 = 1.1;    break;
+  case "בינוני":      safDown3 = 0.3;  safUp3 = 0.6;    break;
+  case "מועט":      safDown3 = 0;    safUp3 = 0.3;    break;
 }
 switch (selectedExposure4) {
-  case "אין העדפה": const safDown4 = 0; const safUp4 = 1.1;  break;
-  case "מוגבר": const safDown4 = 0.6; const safUp4 = 1.1;    break;
-  case "בינוני": const safDown4 = 0.3; const safUp4 = 0.6;    break;
-  case "מועט": const safDown4 = 0;   const safUp4 = 0.3;    break;
+  case "אין העדפה":  safDown4 = 0;    safUp4 = 1.1;  break;
+  case "מוגבר":     safDown4 = 0.6;  safUp4 = 1.1;    break;
+  case "בינוני":     safDown4 = 0.3;  safUp4 = 0.6;    break;
+  case "מועט":      safDown4 = 0;    safUp4 = 0.3;    break;
 }
         
         
