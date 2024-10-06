@@ -40,46 +40,49 @@ function getMaslul(x, y) {
         const act10="הלכתי";      
 
 // בודק בחירת חשיפות ----------------------------------------------------------------------------
-        const selectedExposure1 = document.querySelector('input[name="exposure1"]:checked');
-        const selectedExposure2 = document.querySelector('input[name="exposure2"]:checked');
-        const selectedExposure3 = document.querySelector('input[name="exposure3"]:checked');
-        const selectedExposure4 = document.querySelector('input[name="exposure4"]:checked');
-        
-let safDown1, safUp1;
-let safDown2, safUp2;
-let safDown3, safUp3;
-let safDown4, safUp4;
+        const selectedExposureSelect1 = document.querySelector('input[name="exposure1"]:checked');
+        const selectedExposureSelect2 = document.querySelector('input[name="exposure2"]:checked');
+        const selectedExposureSelect3 = document.querySelector('input[name="exposure3"]:checked');
+        const selectedExposureSelect4 = document.querySelector('input[name="exposure4"]:checked');
 
-switch (selectedExposure1) {
-  case "אין העדפה":  safDown1 = 0;   safUp1 = 1.1;  break;
-  case "מוגבר":     safDown1 = 0.6;  safUp1 = 1.1;    break;
-  case "בינוני":     safDown1 = 0.3;  safUp1 = 0.6;    break;
-  case "מועט":      safDown1 = 0;    safUp1 = 0.3;    break;
-}
-switch (selectedExposure2) {
-  case "אין העדפה":  safDown2 = 0;    safUp2 = 1.1;  break;
-  case "מוגבר":     safDown2 = 0.6;  safUp2 = 1.1;    break;
-  case "בינוני":     safDown2 = 0.3;  safUp2 = 0.6;    break;
-  case "מועט":      safDown2 = 0;    safUp2 = 0.3;    break;
-}
-switch (selectedExposure3) {
-  case "אין העדפה":  safDown3 = 0;    safUp3 = 1.1;  break;
-  case "מוגבר":     safDown3 = 0.6;  safUp3 = 1.1;    break;
-  case "בינוני":      safDown3 = 0.3;  safUp3 = 0.6;    break;
-  case "מועט":      safDown3 = 0;    safUp3 = 0.3;    break;
-}
-switch (selectedExposure4) {
-  case "אין העדפה":  safDown4 = 0;    safUp4 = 1.1;  break;
-  case "מוגבר":     safDown4 = 0.6;  safUp4 = 1.1;    break;
-  case "בינוני":     safDown4 = 0.3;  safUp4 = 0.6;    break;
-  case "מועט":      safDown4 = 0;    safUp4 = 0.3;    break;
-}
+        const selectedExposure1 = selectedExposureSelect1.value;
+        const selectedExposure2 = selectedExposureSelect2.value;
+        const selectedExposure3 = selectedExposureSelect3.value;
+        const selectedExposure4 = selectedExposureSelect4.value;
+       
+      let safDown1, safUp1;
+      let safDown2, safUp2;
+      let safDown3, safUp3;
+      let safDown4, safUp4;
+
+      switch (selectedExposure1) {
+        case "אין העדפה":  safDown1 = 0;   safUp1 = 1.1;  break;
+        case "מוגבר":     safDown1 = 0.6;  safUp1 = 1.1;    break;
+        case "בינוני":     safDown1 = 0.3;  safUp1 = 0.6;    break;
+        case "מועט":      safDown1 = 0;    safUp1 = 0.3;    break;
+      }
+      switch (selectedExposure2) {
+        case "אין העדפה":  safDown2 = 0;    safUp2 = 1.1;  break;
+        case "מוגבר":     safDown2 = 0.6;  safUp2 = 1.1;    break;
+        case "בינוני":     safDown2 = 0.3;  safUp2 = 0.6;    break;
+        case "מועט":      safDown2 = 0;    safUp2 = 0.3;    break;
+      }
+      switch (selectedExposure3) {
+        case "אין העדפה":  safDown3 = 0;    safUp3 = 1.1;  break;
+        case "מוגבר":     safDown3 = 0.6;  safUp3 = 1.1;    break;
+        case "בינוני":      safDown3 = 0.3;  safUp3 = 0.6;    break;
+        case "מועט":      safDown3 = 0;    safUp3 = 0.3;    break;
+      }
+      switch (selectedExposure4) {
+        case "אין העדפה":  safDown4 = 0;    safUp4 = 1.1;  break;
+        case "מוגבר":     safDown4 = 0.6;  safUp4 = 1.1;    break;
+        case "בינוני":     safDown4 = 0.3;  safUp4 = 0.6;    break;
+        case "מועט":      safDown4 = 0;    safUp4 = 0.3;    break;
+      }
         
-        
+        console.log(electedExposure1);
         console.log( safDown1 , safUp1);
-        console.log(safDown2 , safUp2);
-        console.log(safDown3 , safUp3);
-        console.log(safDown4 , safUp4);
+        
 // --------------------------------------------------------------------------------------------
 
      
