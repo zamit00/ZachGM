@@ -23,18 +23,20 @@ function handlemaslul() {
 let selectElement = document.getElementById('maslul-type');
 
 if (selectElement.options.length === 0) {
-  for (let i = 0; i<5;i++){
-  const maslult = document.getElementById('mas' + index);
-  const tsuabest = document.getElementById('tas' + index);
-    maslul.textContent='';
-    tsuabest.textContent='';
+
     const myElement1 = document.getElementById('allthetables1');
     myElement1.style.display = 'none';
     const myElement2 = document.getElementById('allthetables2');
     myElement2.style.display = 'none';
     const myElement3 = document.getElementById('allthetables3');
     myElement3.style.display = 'none';
-    
+     
+  for (let i = 0; i<5;i++){
+  const maslult = document.getElementById('mas' + index);
+  const tsuabest = document.getElementById('tas' + index);
+    maslul.textContent='';
+    tsuabest.textContent='';
+
   }
 } 
 
