@@ -226,6 +226,7 @@ function performAction(itemNumber) {
       const maslulItem=document.getElementById('mas' + masnum).textContent;
      let varsplit = maslulItem.split('-');
       let kupaID = parseInt(varsplit[0]);
+      console.log('itnumber: ERROR'+ kupaID);
   performAction(kupaID);
 }
   
@@ -234,6 +235,7 @@ function maslulselect(){
     const maslulItem=document.getElementById('maslul-type').textContent;
      let varsplit = maslulItem.split('-');
       let kupaID = parseInt(varsplit[0]);
+      console.log('itnumber: ERROR'+ kupaID);
   performAction(kupaID);
 }
 
