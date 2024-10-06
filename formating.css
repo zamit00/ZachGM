@@ -9,7 +9,7 @@
 .allpage {
   border: 1px solid black; /* מסגרת שחורה מסביב לאלמנט */
   width: 100%; /* שיגדל לפי רוחב המיכל */
-  max-width: 800px; /* הגבלת רוחב מקסימלי ל-850 פיקסלים */
+  width: auto; /* הגבלת רוחב מקסימלי ל-850 פיקסלים */
   height: auto; /* גובה יותאם לתוכן */
 }
 .tozaa{border: 1px solid black;margin-right: 5px;; width: 650px; heigth: 500px;}
