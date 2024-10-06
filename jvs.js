@@ -163,7 +163,7 @@ function addOption(value, text,tesua) {
     newOption.value = tesua;
     newOption.id = value;
     newOption.textContent = value+ "-" +text;
-    console.log(tesua);
+    console.log(tesua,"-",value, "-",text);
     // Append the new option to the select element
     select.appendChild(newOption);
 }
