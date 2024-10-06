@@ -2,7 +2,7 @@
 .allpage {
   border: 1px solid black; /* מסגרת שחורה מסביב לאלמנט */
   width: 100%; /* שיגדל לפי רוחב המיכל */
-  max-width: 850px; /* הגבלת רוחב מקסימלי ל-850 פיקסלים */
+  max-width: 800px; /* הגבלת רוחב מקסימלי ל-850 פיקסלים */
   height: auto; /* גובה יותאם לתוכן */
 }
 
@@ -30,7 +30,7 @@
 #nh3,#nh4,#nh5 {text-align: center;}
 #nh31,#nh41,#nh51 {text-align: center;width: 175px}
 .tdsmall{width: 175px;height: 30px;font-size: 20px;border: 1px solid black;text-align: center;vertical-align:middle;}
-.tdbig{width: 500px;height: 30px;font-size: 20px;border: 1px solid black;text-align: center;vertical-align:middle;}
+.tdbig{width: 450px;height: 30px;font-size: 20px;border: 1px solid black;text-align: center;vertical-align:middle;}
 .tdbold{background-color: blue;color: white;height: 30px;border: 1px solid black;text-align: center;vertical-align:middle;}
 #exposure2-preference {margin-right: 15x;}
 #goToPage2,#mybutton {font-size:15px; margin-top: 15px;height: 30px;width: 200px;margin-bottom: 15px;}
