@@ -274,7 +274,7 @@ function sortData() {
 
   // Loop through each option and add it to the collection
   for (let i = 0; i < selectElement.options.length; i++) {
-      let value = parseInt(selectElement.options[i].value); // Convert value to an integer
+      let value = parseFloat(selectElement.options[i].value); // Convert value to an integer
       let text = selectElement.options[i].text; // Get the corresponding option text
       optionCollection.push({ value: value, text: text }); // Store both value and text in an object
   }
