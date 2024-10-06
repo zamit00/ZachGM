@@ -234,8 +234,13 @@ if (!data.includes(searchString)) {
     return; // Exit the function if searchString is not found in the content
 }
 
-          const myElement = document.getElementById('allthetables');
-          myElement.style.display = 'block';
+          const myElement1 = document.getElementById('allthetables1');
+          myElement1.style.display = 'block';
+          const myElement2 = document.getElementById('allthetables2');
+          myElement2.style.display = 'block';
+          const myElement3 = document.getElementById('allthetables3');
+          myElement3.style.display = 'block';
+
           
             const startIndex = data.indexOf(searchString)+ searchString.length;
 
