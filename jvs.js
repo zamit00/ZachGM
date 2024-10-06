@@ -102,7 +102,7 @@ function getMaslul(x, y) {
                   if (fields[3].includes(x) && item.includes(y) && fields[41]>= safDown1
                    && fields[41]< safUp1  && fields[43]>= safDown2 && fields[43]< safUp2  && fields[33]>= safDown3
                    && fields[33]< safUp3  && fields[45]>= safDown4 && fields[45]< safUp4) {
-                  addOption(fields[1], fields[2],fields[8]);
+                  addOption(fields[1], fields[2],fields[9]);
                  } 
             }
            }   
@@ -113,7 +113,7 @@ function getMaslul(x, y) {
                 if (fields[3].includes(x) && actionsA.some(action => fields[5].includes(action)) && fields[41]>= safDown1
                    && fields[41]< safUp1  && fields[43]>= safDown2 && fields[43]< safUp2  && fields[33]>= safDown3
                    && fields[33]< safUp3  && fields[45]>= safDown4 && fields[45]< safUp4) {
-                addOption(fields[1], fields[2],fields[8]);
+                addOption(fields[1], fields[2],fields[9]);
                 }
             }
         }  
@@ -124,7 +124,7 @@ function getMaslul(x, y) {
                   if (fields[3].includes(x) && actionsP.some(action => fields[5].includes(action)) && fields[41]>= safDown1
                    && fields[41]< safUp1  && fields[43]>= safDown2 && fields[43]< safUp2  && fields[33]>= safDown3
                    && fields[33]< safUp3  && fields[45]>= safDown4 && fields[45]< safUp4) {
-                addOption(fields[1], fields[2],fields[8]);
+                addOption(fields[1], fields[2],fields[9]);
                  }  
                }
           }
@@ -133,7 +133,7 @@ function getMaslul(x, y) {
                   if (fields[3].includes(x) && fields[5].includes(act9) && fields[41]>= safDown1
                    && fields[41]< safUp1  && fields[43]>= safDown2 && fields[43]< safUp2  && fields[33]>= safDown3
                    && fields[33]< safUp3  && fields[45]>= safDown4 && fields[45]< safUp4 ) {
-                  addOption(fields[1], fields[2],fields[8]);
+                  addOption(fields[1], fields[2],fields[9]);
                  }  
                }
           }
