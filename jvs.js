@@ -278,8 +278,9 @@ function sortData() {
             
             if (paragraph) {
                 paragraph.textContent = option.text + " - " + option.value + "%";
-            } 
+            }
+  }
   });
-};
+}
 
 
