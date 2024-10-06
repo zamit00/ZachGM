@@ -172,13 +172,13 @@ document.getElementById('maslul-type').addEventListener('change', function() {
     let muzarSelect = document.getElementById('maslul-type');
     let value1 = muzarSelect.options[muzarSelect.selectedIndex].id;
     console.log(value1);
-    let varsplit = value1.split('-');
-    console.log(varsplit[0]);
+    //let varsplit = value1.split('-');
+    //console.log(varsplit[0]);
 
     // Correctly set the value and text of the option with id "optButton"
     let optButton = document.getElementById("optButton");
-    optButton.value = varsplit[0]; // Assign value
-    optButton.textContent = varsplit[0]; // Assign text
+    optButton.value =value1; // Assign value
+    optButton.textContent = value1; // Assign text
     console.log(parseInt(document.getElementsByName("txt1")[0]?.value));
     });
 
