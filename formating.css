@@ -25,19 +25,17 @@
 
 
 
-.thb {height: 30px;border: 1px solid black;width: 300px;font-size:20px;text-align:auto;
+.thb {height: 25px;border: 1px solid black;width: 240px;font-size:17px;text-align:auto;
            color: white;vertical-align: middle;background-color: blue;}
-.thbh {height: 30px;border: 1px solid black;width: 300px;font-size:20px;text-align:auto;
+.thbh {height: 25px;border: 1px solid black;width: 240px;font-size:17px;text-align:auto;
            color: white;vertical-align: middle;background-color: rgb(91, 127, 219);}
 #nh3,#nh4,#nh5 {text-align: center;}
 #nh31,#nh41,#nh51 {text-align: center;width: 175px}
-.tdsmall{width: 175px;height: 30px;font-size: 20px;border: 1px solid black;text-align: center;vertical-align:middle;}
-.tdbig{width: 450px;height: 30px;font-size: 20px;border: 1px solid black;text-align: center;vertical-align:middle;}
-.tdbold{background-color: blue;color: white;height: 30px;border: 1px solid black;text-align: center;vertical-align:middle;}
+.tdsmall{width: 125px;height: 25px;font-size: 17px;border: 1px solid black;text-align: center;vertical-align:middle;}
+.tdbig{width: 410px;height: 25px;font-size: 17px;border: 1px solid black;text-align: center;vertical-align:middle;}
+.tdbold{background-color: blue;color: white;height: 25px;border: 1px solid black;text-align: center;vertical-align:middle;}
 #exposure2-preference {margin-right: 15x;}
-#goToPage2,#mybutton {font-size:15px; margin-top: 15px;height: 30px;width: 200px;margin-bottom: 15px;}
-#goToPage1 {font-size:15px; margin-top: 15px;height: 30px;width: 200px;margin-bottom: 15px;}
-#text1 {margin-right: 35px;height: 40px;width: 180px;font-size: 25px;text-align: center;}
+
 .alltables{
 // display:flex;
   overflow-x: auto;
