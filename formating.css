@@ -1,3 +1,4 @@
+.alltables{ display: none;}
 .hasifa {margin-right: 10px;}
 #mas1,#mas2,#mas3,#mas4,#mas0,#maskot{width:400px;height: 20px;border: 1px solid black;
                                       vertical-align: middle;font-size:10px;text-align:auto;}
