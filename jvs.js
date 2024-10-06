@@ -3,6 +3,10 @@ document.getElementById('product').addEventListener('change', handleSelectChange
 document.getElementById('management-type').addEventListener('change', handleSelectChange);
 
 
+document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
+  radio.addEventListener('change', handleSelectChange);
+});
+
 // --------------------------------------------------------------------------------------------
 function handleSelectChange() {
     let optButton = document.getElementById("optButton");
