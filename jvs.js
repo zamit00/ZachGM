@@ -11,7 +11,12 @@ document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
 function handleSelectChange() {
    
     
-   
+          const myElement1 = document.getElementById('allthetables1');
+          myElement1.style.display = 'none';
+          const myElement2 = document.getElementById('allthetables2');
+          myElement2.style.display = 'none';
+          const myElement3 = document.getElementById('allthetables3');
+          myElement3.style.display = 'none';
 
     let muzarSelect = document.getElementById('product');
     let nihulSelect = document.getElementById('management-type');
