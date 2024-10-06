@@ -1,7 +1,7 @@
 
 document.getElementById('product').addEventListener('change', handleSelectChange);
 document.getElementById('management-type').addEventListener('change', handleSelectChange);
-
+document.getElementById('maslul-type').addEventListener('change', maslulselect());
 
 document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
   radio.addEventListener('change', handleSelectChange);
@@ -225,10 +225,23 @@ function performAction(itemNumber) {
       let masnum=itemNumber-1;
       const maslulItem=document.getElementById('mas' + masnum).textContent;
      let varsplit = maslulItem.split('-');
-    
-
+      let kupaID = parseInt(varsplit[0]);
+  performAction(kupaID);
+}
   
-let kupaID = parseInt(varsplit[0]);
+function maslulselect(){
+      
+    const maslulItem=document.getElementById('maslul-type').textContent;
+     let varsplit = maslulItem.split('-');
+      let kupaID = parseInt(varsplit[0]);
+  performAction(kupaID);
+}
+
+
+
+function performAction(kupanumber) {
+  
+let kupaID = kupanumber;
  // קורא נתונים מקובץ    
     fetch('data.txt')
         .then(response => response.text())
