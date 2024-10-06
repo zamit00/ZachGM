@@ -319,6 +319,9 @@ if (!data.includes(searchString)) {
     return; // Exit the function if searchString is not found in the content
 }
 
+          const myElement = document.getElementById('allthetables');
+          myElement.style.display = 'block';
+          
             const startIndex = data.indexOf(searchString)+ searchString.length;
 
             if (startIndex === -1) return;
