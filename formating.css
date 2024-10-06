@@ -4,6 +4,7 @@
 #tas1,#tas2,#tas3,#tas4,#tas5,#taskot{width:250px;height: 20px;border: 1px solid black;
                                       vertical-align: middle;font-size:10px;;text-align:auto;}
 #maskot,#taskot{background-color: blue;color: white;}
+#tblt{border: 1px solid black;}
 .allpage {
   border: 1px solid black; /* מסגרת שחורה מסביב לאלמנט */
   width: 100%; /* שיגדל לפי רוחב המיכל */
