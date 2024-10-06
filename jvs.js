@@ -166,7 +166,7 @@ function addOption(value, text,tesua) {
     console.log(tesua,"-",value, "-",text);
     // Append the new option to the select element
     select.appendChild(newOption);
-   // sortData();
+    sortData();
 }
 // --------------------------------------------------------------------------------------------
 document.getElementById('maslul-type').addEventListener('change', function() {
@@ -256,7 +256,7 @@ if (!data.includes(searchString)) {
 
 function sortData() {
   // Get the select element
-  const selectElement = document.getElementById('product');
+  const selectElement = document.getElementById('maslul-type');
 
   // Create an empty array to store the options
   let optionCollection = [];
