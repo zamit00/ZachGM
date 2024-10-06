@@ -307,7 +307,7 @@ function performAction(itemNumber) {
     
       
           
-          optButton.textContent =  varsplit[0];
+  optButton.textContent =  varsplit[0];
 let kupaID = parseInt(varsplit[0]);
  // קורא נתונים מקובץ    
     fetch('data.txt')
@@ -356,7 +356,7 @@ if (!data.includes(searchString)) {
             document.getElementById('ahuz7').textContent = (Number(fields[44] || 0) * 100).toLocaleString() + '%';
         })
         .catch(error => console.error('Error fetching the file:', error));
-});
+}
 
 
 
