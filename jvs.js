@@ -1,7 +1,9 @@
 
 document.getElementById('product').addEventListener('change', handleSelectChange);
 document.getElementById('management-type').addEventListener('change', handleSelectChange);
-document.getElementById('maslul-type').addEventListener('change', maslulselect());
+document.getElementById('maslul-type').addEventListener('change', function() {
+  maslulselect();
+});
 
 document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
   radio.addEventListener('change', handleSelectChange);
