@@ -80,11 +80,7 @@ function getMaslul(x, y) {
         case "מועט":      safDown4 = 0;    safUp4 = 0.3;    break;
       }
         
-        console.log(selectedExposure1);
-        console.log( safDown1 , safUp1);
-        console.log( safDown2 , safUp2);
-        console.log( safDown3 , safUp3);
-        console.log( safDown4 , safUp4);
+        
         
 // --------------------------------------------------------------------------------------------
 
@@ -163,10 +159,10 @@ function addOption(value, text,tesua) {
     newOption.value = tesua;
     newOption.id = value;
     newOption.textContent = value+ "-" +text;
-    console.log(tesua,"-",value, "-",text);
+    
     // Append the new option to the select element
     select.appendChild(newOption);
-    console.log("sorted:");
+    
     sortData();
 }
 // --------------------------------------------------------------------------------------------
