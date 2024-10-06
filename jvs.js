@@ -9,9 +9,9 @@ document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
 
 // --------------------------------------------------------------------------------------------
 function handleSelectChange() {
-    let optButton = document.getElementById("optButton");
-    optButton.value = ""; // Assign value
-    optButton.textContent = ""; // Assign text
+   
+    
+   
 
     let muzarSelect = document.getElementById('product');
     let nihulSelect = document.getElementById('management-type');
@@ -221,9 +221,8 @@ function performAction(itemNumber) {
       const maslulItem=document.getElementById('mas' + masnum).textContent;
      let varsplit = maslulItem.split('-');
     
-      
-          
-  optButton.textContent =  varsplit[0];
+
+  
 let kupaID = parseInt(varsplit[0]);
  // קורא נתונים מקובץ    
     fetch('data.txt')
