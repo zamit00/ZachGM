@@ -48,35 +48,35 @@ function getMaslul(x, y) {
 let safDown1, safUp1;let safDown2, safUp2;let safDown3, safUp3;let safDown4, safUp4;
 
 switch (selectedExposure1) {
-  case "אין העדפה": safDown1 = 0; safUp1 = 1.1;  break;
-  case "מוגבר": safDown1 = 0.6; safUp1 = 1.1;    break;
-  case "בינוני": safDown1 = 0.3; safUp1 = 0.6;    break;
-  case "מועט": safDown1 = 0;   safUp1 = 0.3;    break;
+  case "אין העדפה": safDown1 = "0"; safUp3 = "1.1";  break;
+  case "מוגבר": safDown1 = "0.6"; safUp3 = "1.1";    break;
+  case "בינוני": safDown1 = "0.3"; safUp3 = "0.6";    break;
+  case "מועט": safDown1 = "0";   safUp3 = "0.3";    break;
 }
 switch (selectedExposure2) {
-  case "אין העדפה": safDown2 = 0; safUp2 = 1.1;  break;
-  case "מוגבר": safDown2 = 0.6; safUp2 = 1.1;    break;
-  case "בינוני": safDown2 = 0.3; safUp2 = 0.6;    break;
-  case "מועט": safDown2 = 0;   safUp2 = 0.3;    break;
+  case "אין העדפה": safDown2 = "0"; safUp3 = "1.1";  break;
+  case "מוגבר": safDown2 = "0.6"; safUp3 = "1.1";    break;
+  case "בינוני": safDown2 = "0.3"; safUp3 = "0.6";    break;
+  case "מועט": safDown2 = "0";   safUp3 = "0.3";    break;
 }
 switch (selectedExposure3) {
-  case "אין העדפה": safDown3 = 0; safUp3 = 1.1;  break;
-  case "מוגבר": safDown3 = 0.6; safUp3 = 1.1;    break;
-  case "בינוני": safDown3 = 0.3; safUp3 = 0.6;    break;
-  case "מועט": safDown3 = 0;   safUp3 = 0.3;    break;
+  case "אין העדפה": safDown3 = "0"; safUp3 = "1.1";  break;
+  case "מוגבר": safDown3 = "0.6"; safUp3 = "1.1";    break;
+  case "בינוני": safDown3 = "0.3"; safUp3 = "0.6";    break;
+  case "מועט": safDown3 = "0";   safUp3 = "0.3";    break;
 }
 switch (selectedExposure4) {
-  case "אין העדפה": safDown4 = 0; safUp4 = 1.1;  break;
-  case "מוגבר": safDown4 = 0.6; safUp4 = 1.1;    break;
-  case "בינוני": safDown4 = 0.3; safUp4 = 0.6;    break;
-  case "מועט": safDown4 = 0;   safUp4 = 0.3;    break;
+  case "אין העדפה": safDown4 = "0"; safUp3 = "1.1";  break;
+  case "מוגבר": safDown4 = "0.6"; safUp3 = "1.1";    break;
+  case "בינוני": safDown4 = "0.3"; safUp3 = "0.6";    break;
+  case "מועט": safDown4 = "0";   safUp3 = "0.3";    break;
 }
         
         
-        console.log(`Exposure: ${exposure1}, safDown: ${safDown1}, safUp: ${safUp1}`);
-        console.log(`Exposure: ${exposure2}, safDown: ${safDown2}, safUp: ${safUp2}`);
-        console.log(`Exposure: ${exposure3}, safDown: ${safDown3}, safUp: ${safUp3}`);
-        console.log(`Exposure: ${exposure4}, safDown: ${safDown4}, safUp: ${safUp4}`);
+        console.log( safDown1 + safUp1);
+        console.log(safDown1 + safUp2);
+        console.log(safDown2 + safUp3);
+        console.log(safDown3 + safUp4);
 // --------------------------------------------------------------------------------------------
 
      
