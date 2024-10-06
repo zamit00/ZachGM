@@ -166,6 +166,7 @@ function addOption(value, text,tesua) {
     console.log(tesua,"-",value, "-",text);
     // Append the new option to the select element
     select.appendChild(newOption);
+    sortData();
 }
 // --------------------------------------------------------------------------------------------
 document.getElementById('maslul-type').addEventListener('change', function() {
