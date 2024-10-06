@@ -15,10 +15,11 @@ function handleSelectChange() {
 
     let muzarSelect = document.getElementById('product');
     let nihulSelect = document.getElementById('management-type');
+    
 
     let value1 = muzarSelect.value;
     let value2 = nihulSelect.value === "ללא העדפה" ? muzarSelect.value : nihulSelect.value;
-
+    
     // Only call the function if both values are selected (non-empty)
     if (value1 !== "" && value2 !== "") {
         getMaslul(value1, value2);
@@ -254,9 +255,20 @@ if (!data.includes(searchString)) {
 
 
 function sortData() {
+  
+  
+  
   // Get the select element
   const selectElement = document.getElementById('maslul-type');
+  let value3=selectElement.innerHTML;
 
+  if (value3===''){
+    for (let i = 0; i<5;i++){
+    const paragraph = document.getElementById('p' + i);
+    paragraph.textContent''; 
+    }
+    return;
+  }
   // Create an empty array to store the options
   let optionCollection = [];
 
