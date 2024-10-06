@@ -146,7 +146,8 @@ function getMaslul(x, y) {
     
     }); 
     });
-    }
+      
+    sortData();}
 } 
 // --------------------------------------------------------------------------------------------
 // add a new option
@@ -163,7 +164,7 @@ function addOption(value, text,tesua) {
     // Append the new option to the select element
     select.appendChild(newOption);
     
-    sortData();
+    
 }
 // --------------------------------------------------------------------------------------------
 document.getElementById('maslul-type').addEventListener('change', function() {
