@@ -290,7 +290,7 @@ function sortData() {
 
     const maslult = document.getElementById('mas' + index);
     const tsuabest = document.getElementById('tas' + index);        
-            if (maslult) {
+            if (maslult && tsuabest) {
               
                maslult.textContent = option.text;
               tsuabest.textContent = option.value + "%";
