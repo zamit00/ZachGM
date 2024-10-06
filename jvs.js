@@ -80,8 +80,11 @@ function getMaslul(x, y) {
         case "מועט":      safDown4 = 0;    safUp4 = 0.3;    break;
       }
         
-        console.log(electedExposure1);
+        console.log(selectedExposure1);
         console.log( safDown1 , safUp1);
+        console.log( safDown2 , safUp2);
+        console.log( safDown3 , safUp3);
+        console.log( safDown4 , safUp4);
         
 // --------------------------------------------------------------------------------------------
 
