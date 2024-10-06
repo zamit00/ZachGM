@@ -265,7 +265,7 @@ function sortData() {
   if (value3===''){
     for (let i = 0; i<5;i++){
     const paragraph = document.getElementById('p' + i);
-    paragraph.textContent''; 
+    paragraph.textContent=''; 
     }
     return;
   }
