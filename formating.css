@@ -47,7 +47,7 @@ min-width: 600px;
   .radio-group .rd {
     display: flex;
     align-items: center;
-    margin-right: 15px;
+    margin-right: 35px;
   }
 
   .radio-group .rd input {
