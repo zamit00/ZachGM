@@ -52,9 +52,7 @@ min-width: 600px;
 
 .table-container2,.table-container4{margin-right: 5px;margin-top: 15px;}
  .rdb1{margin-right: 15px;}
- .radio-group {
-    margin-bottom: 15px;
-  }
+ .radio-group {margin-right:35px; margin-bottom: 15px;}
   
   .radio-group .rd {
     display: flex;
@@ -80,4 +78,4 @@ min-width: 600px;
    max-width: 710px;
    height:40px;  
   }
-.radio-all {margin-right:35px;}
+
