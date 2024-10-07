@@ -289,7 +289,7 @@ if (!data.includes(searchString)) {
             document.getElementById('output6').textContent = Number(fields[6] || 0).toLocaleString() + " מלשח";
             document.getElementById('output7').textContent = fields[7] + '%';
           
-            if (isNaN(fields[8]) || parseFloat(fields[8])===0 || fields[8]==='') {document.getElementById('output8').textContent="הוקם בתאירך : " + fields[46];
+            if (isNaN(fields[8]) || parseFloat(fields[8])===0 || fields[8]==='') {document.getElementById('output8').textContent="הוקם בתאריך : " + fields[45];
             }
             else{document.getElementById('output8').textContent = fields[8] + '%';}
             if (isNaN(fields[9]) || parseFloat(fields[9])===0 || fields[9]===''){fields[9]=fields[9];}
