@@ -287,10 +287,14 @@ if (!data.includes(searchString)) {
             document.getElementById('output4').textContent = fields[3] || '';
             document.getElementById('output5').textContent = fields[4] || '';
             document.getElementById('output6').textContent = Number(fields[6] || 0).toLocaleString() + " מלשח";
-            document.getElementById('output7').textContent = fields[7] + '%';
-          
-            if (isNaN(fields[8]) || parseFloat(fields[8])===0 || fields[8]==='') {document.getElementById('output8').textContent="הוקם בתאריך : " + fields[45];
+
+          if (isNaN(fields[7]) || parseFloat(fields[7])===0 || fields[7]==='') {document.getElementById('output8').textContent="הוקם בתאריך : " + fields[45];
             }
+            else{document.getElementById('output7').textContent = fields[7] + '%';}
+          
+            
+          
+            if (isNaN(fields[8]) || parseFloat(fields[8])===0 || fields[8]==='') {fields[8]=fields[8];}
             else{document.getElementById('output8').textContent = fields[8] + '%';}
             if (isNaN(fields[9]) || parseFloat(fields[9])===0 || fields[9]===''){fields[9]=fields[9];}
             else{document.getElementById('output9').textContent = fields[9] + '%';}
