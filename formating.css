@@ -48,6 +48,7 @@ min-width: 600px;
   width: 100%;
   max-width:100%;
   border-collapse: collapse;
+  margin-right:35px;
 }
 
 .table-container2,.table-container4{margin-right: 5px;margin-top: 15px;}
