@@ -286,7 +286,7 @@ if (!data.includes(searchString)) {
             document.getElementById('output3').textContent = fields[2] || '';
             document.getElementById('output4').textContent = fields[3] || '';
             document.getElementById('output5').textContent = fields[4] || '';
-            document.getElementById('output6').textContent = Number(fields[6] || 0).toLocaleString() + " מלשח";
+            document.getElementById('output6').textContent = Number(fields[6] || 0).toLocaleString() + " מלש\"ח";
 
           if (isNaN(fields[7]) || parseFloat(fields[7])===0 || fields[7]==='') {document.getElementById('output8').textContent="תאריך הקמה : " + fields[45];
             }
@@ -301,13 +301,13 @@ if (!data.includes(searchString)) {
          
             document.getElementById('output10').textContent = fields[11];
 
-            document.getElementById('schom1').textContent = Number(fields[31] || 0).toLocaleString() + " אשח";
-            document.getElementById('schom2').textContent = Number(fields[33] || 0).toLocaleString() + " אשח";
-            document.getElementById('schom3').textContent = Number(fields[35] || 0).toLocaleString() + " אשח";
-            document.getElementById('schom4').textContent = Number(fields[37] || 0).toLocaleString() + " אשח";
-            document.getElementById('schom5').textContent = Number(fields[39] || 0).toLocaleString() + " אשח";
-            document.getElementById('schom6').textContent = Number(fields[41] || 0).toLocaleString() + " אשח";
-            document.getElementById('schom7').textContent = Number(fields[43] || 0).toLocaleString() + " אשח";
+            document.getElementById('schom1').textContent = Number(fields[31] || 0).toLocaleString() + " אש\"ח";
+            document.getElementById('schom2').textContent = Number(fields[33] || 0).toLocaleString() + " אש\"ח";
+            document.getElementById('schom3').textContent = Number(fields[35] || 0).toLocaleString() + " אש\"ח";
+            document.getElementById('schom4').textContent = Number(fields[37] || 0).toLocaleString() + " אש\"ח";
+            document.getElementById('schom5').textContent = Number(fields[39] || 0).toLocaleString() + " אש\"ח";
+            document.getElementById('schom6').textContent = Number(fields[41] || 0).toLocaleString() + " אש\"ח";
+            document.getElementById('schom7').textContent = Number(fields[43] || 0).toLocaleString() + " אש\"ח";
 
             document.getElementById('ahuz1').textContent = (Number(fields[32] || 0) * 100).toLocaleString() + '%';
             document.getElementById('ahuz2').textContent = (Number(fields[34] || 0) * 100).toLocaleString() + '%';
