@@ -212,11 +212,17 @@ function sortData() {
   optionCollection.forEach((option,index) => {if (index < 5){
 
     const maslult = document.getElementById('mas' + index);
+    
     const tsuabest = document.getElementById('tas' + index);        
             if (maslult && tsuabest) {
               
                maslult.textContent = option.text;
-              tsuabest.textContent = option.value + "%";
+    if (isNaN(option.value)) {
+      tsuabest.textContent = null;
+    }
+    else { tsuabest.textContent = option.value + "%";
+    }
+              
             }
               
             else{console.log('ERROR');}
