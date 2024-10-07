@@ -76,7 +76,7 @@ min-width: 600px;
     flex-wrap: wrap;
     align-items: center;
    border: 1px solid black;
-   max-width: 710px;
+   width: 710px;
    height:40px;  
   }
 
