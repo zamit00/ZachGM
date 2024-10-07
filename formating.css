@@ -1,10 +1,10 @@
 .allpage{border:border: 1px solid black;height: auto;}
 #allthetables1,#allthetables2,#allthetables3{display: none;}
 .hasifa {margin-right: 10px;}
-#mas1,#mas2,#mas3,#mas4,#mas0,#maskot{width:410px;height: 25px;border: 1px solid black;
-                                      vertical-align: middle;font-size:17px;text-align:auto;color:blue;}
-#tas1,#tas2,#tas3,#tas4,#tas0,#taskot{width:240px;height: 25px;border: 1px solid black;
-                                      vertical-align: middle;font-size:17px;;text-align:center;}
+#mas1,#mas2,#mas3,#mas4,#mas0,#maskot{width:410px;height: 30px;border: 1px solid black;
+                                      vertical-align: middle;font-size:22px;text-align:auto;color:blue;}
+#tas1,#tas2,#tas3,#tas4,#tas0,#taskot{width:240px;height:30px;border: 1px solid black;
+                                      vertical-align: middle;font-size:22px;;text-align:center;}
 #maskot,#taskot{background-color: blue;color: white;}
 #tblt{border: 1px solid black;}
 
@@ -26,15 +26,15 @@
 
 
 
-.thb {height: 25px;border: 1px solid black;width: 240px;font-size:17px;text-align:auto;
+.thb {height: 30px;border: 1px solid black;width: 240px;font-size:22px;text-align:auto;
            color: white;vertical-align: middle;background-color: blue;}
-.thbh {height: 25px;border: 1px solid black;width: 240px;font-size:17px;text-align:auto;
+.thbh {height: 30px;border: 1px solid black;width: 240px;font-size:22px;text-align:auto;
            color: white;vertical-align: middle;background-color: rgb(91, 127, 219);}
 #nh3,#nh4,#nh5 {text-align: center;}
 #nh31,#nh41,#nh51 {text-align: center;width: 175px}
-.tdsmall{width: 200px;height: 25px;font-size: 17px;border: 1px solid black;text-align: center;vertical-align:middle;}
-.tdbig{width: 410px;height: 25px;font-size: 17px;border: 1px solid black;text-align: center;vertical-align:middle;}
-.tdbold{background-color: blue;color: white;height: 25px;border: 1px solid black;text-align: center;vertical-align:middle;}
+.tdsmall{width: 200px;height: 30px;font-size: 22px;border: 1px solid black;text-align: center;vertical-align:middle;}
+.tdbig{width: 410px;height: 30px;font-size: 22px;border: 1px solid black;text-align: center;vertical-align:middle;}
+.tdbold{background-color: blue;color: white;height: 30px;border: 1px solid black;text-align: center;vertical-align:middle;}
 #exposure2-preference {margin-right: 15x;}
 
 .alltables{
