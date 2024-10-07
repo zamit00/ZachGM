@@ -12,7 +12,7 @@ document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
 // --------------------------------------------------------------------------------------------
 function handleSelectChange() {
    
-    
+          cleartesua();
           const myElement1 = document.getElementById('allthetables1');
           myElement1.style.display = 'none';
           const myElement2 = document.getElementById('allthetables2');
@@ -307,7 +307,19 @@ if (!data.includes(searchString)) {
 
 
 
+function cleartesua() {
+ document.getElementById('mas0').textContent=''; 
+  document.getElementById('mas1').textContent='';
+  document.getElementById('mas2').textContent='';
+  document.getElementById('mas3').textContent='';
+  document.getElementById('mas4').textContent='';
 
+  document.getElementById('tas0').textContent='';
+  document.getElementById('tas1').textContent='';
+  document.getElementById('tas2').textContent='';
+  document.getElementById('tas3').textContent='';
+  document.getElementById('tas4').textContent='';
+}
 
 
 
