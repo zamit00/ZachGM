@@ -13,11 +13,11 @@
 .tozaa{border: 1px solid black;margin-right:35px; width: 710px; heigth: 500px;margin-bottom:20px;}
 /*.radio-group {max-width: 750px;display: flex; height: 25px;padding: 5px;border: 1px solid rgb(70, 70, 75); background-color: rgb(226, 226, 234); color: rgb(3, 3, 1);font-size: larger;}*/
 .muzar {margin: 15px;}
-#product{border: 1px black;margin-right: 37px;height: 50px;width: 350px;vertical-align:middle;text-align:center;font-size:25px;}
-#management-type{ border: 1px black; margin-right: 10px;height: 50px;width: 180px;vertical-align:middle;text-align:center;font-size:25px;}
+#product{border: 1px solid black;margin-right: 37px;height: 50px;width: 350px;vertical-align:middle;text-align:center;font-size:25px;}
+#management-type{ border: 1px solid black; margin-right: 10px;height: 50px;width: 180px;vertical-align:middle;text-align:center;font-size:25px;}
 
 #sugnihul,#lblproduct, #lblmaslul {margin-right: 15px;font-size:25px;height: 50px;}
-
+#sugnihul{border: 1px solid black;}
 #exposure2-preference{margin-right: 20px;}
 #maslul-type {
  /* appearance: none; 
