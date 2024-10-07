@@ -288,6 +288,11 @@ if (!data.includes(searchString)) {
             document.getElementById('output5').textContent = fields[4] || '';
             document.getElementById('output6').textContent = Number(fields[6] || 0).toLocaleString() + " מלשח";
             document.getElementById('output7').textContent = fields[7] + '%';
+          
+            if (isNaN(fields[8])) {document.getElementById('output8').textContent="הוקם בתאירך : " + fields[46];
+            }
+            else{document.getElementById('output8').textContent = fields[8] + '%';}
+          
             document.getElementById('output8').textContent = fields[8] + '%';
             document.getElementById('output9').textContent = fields[9] + '%';
             document.getElementById('output10').textContent = fields[11];
