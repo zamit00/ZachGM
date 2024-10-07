@@ -288,7 +288,7 @@ if (!data.includes(searchString)) {
             document.getElementById('output5').textContent = fields[4] || '';
             document.getElementById('output6').textContent = Number(fields[6] || 0).toLocaleString() + " מלשח";
 
-          if (isNaN(fields[7]) || parseFloat(fields[7])===0 || fields[7]==='') {document.getElementById('output8').textContent="הוקם בתאריך : " + fields[45];
+          if (isNaN(fields[7]) || parseFloat(fields[7])===0 || fields[7]==='') {document.getElementById('output8').textContent="תאריך הקמה : " + fields[45];
             }
             else{document.getElementById('output7').textContent = fields[7] + '%';}
           
