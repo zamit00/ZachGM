@@ -289,12 +289,12 @@ if (!data.includes(searchString)) {
             document.getElementById('output6').textContent = Number(fields[6] || 0).toLocaleString() + " מלשח";
             document.getElementById('output7').textContent = fields[7] + '%';
           
-            if (isNaN(fields[8]) || parseFloat(fields[8])===0  ) {document.getElementById('output8').textContent="הוקם בתאירך : " + fields[46];
+            if (isNaN(fields[8]) || parseFloat(fields[8])===0 || fields[8]==='') {document.getElementById('output8').textContent="הוקם בתאירך : " + fields[46];
             }
             else{document.getElementById('output8').textContent = fields[8] + '%';}
-            console.log (fields[8]);
-            document.getElementById('output8').textContent = fields[8] + '%';
-            document.getElementById('output9').textContent = fields[9] + '%';
+            if (isNaN(fields[9]) || parseFloat(fields[9])===0 || fields[9]===''){fields[9]=fields[9];}
+            else{document.getElementById('output9').textContent = fields[9] + '%';}
+         
             document.getElementById('output10').textContent = fields[11];
 
             document.getElementById('schom1').textContent = Number(fields[31] || 0).toLocaleString() + " אשח";
