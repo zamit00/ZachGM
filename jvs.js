@@ -292,7 +292,7 @@ if (!data.includes(searchString)) {
             if (isNaN(fields[8]) || parseFloat(fields[8])===0  ) {document.getElementById('output8').textContent="הוקם בתאירך : " + fields[46];
             }
             else{document.getElementById('output8').textContent = fields[8] + '%';}
-          
+            console.log (fields[8]);
             document.getElementById('output8').textContent = fields[8] + '%';
             document.getElementById('output9').textContent = fields[9] + '%';
             document.getElementById('output10').textContent = fields[11];
