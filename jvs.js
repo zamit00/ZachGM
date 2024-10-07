@@ -31,8 +31,36 @@ function handleSelectChange() {
     if (value1 !== "" && value2 !== "") {
         getMaslul(value1, value2);
     }
+  elseif(value1 !== "" && value2 == ""){
+     getallMaslul(value1);
+  }
 }   
 // --------------------------------------------------------------------------------------------
+
+function getallMaslul(x) {
+  document.getElementById('maslul-type').innerHTML = '';
+   // קורא נתונים מקובץ    
+       fetch('data.txt')
+          .then(response => response.text())
+          .then(data => {
+            
+          let fieldRashi = data.split('maslulend'); 
+          fieldRashi.forEach(function(item) {
+          let fields = item.split(',');              
+           
+            if (fields[3] ){
+                  if (fields[3].includes(x)  {
+                  addOption(fields[1], fields[2],fields[9]);
+                 } 
+            }
+    
+    });
+            
+    });
+}
+
+
+
 function getMaslul(x, y) {
     // Check if either of the select fields is empty
     if (x === "" || y === "") {
