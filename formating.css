@@ -35,8 +35,8 @@
            color: white;vertical-align: middle;background-color: rgb(91, 127, 219);}
 #nh3,#nh4,#nh5 {text-align: center;}
 #nh31,#nh41,#nh51 {text-align: center;width: 200px}
-.tdsmall{width: 205px;height: 30px;font-size: 22px;border: 1px solid black;text-align: center;vertical-align:middle;}
-.tdbig{width: 410px;height: 30px;font-size: 22px;border: 1px solid black;text-align: center;vertical-align:middle;}
+.tdsmall{width: 200px;height: 30px;font-size: 22px;border: 1px solid black;text-align: center;vertical-align:middle;}
+.tdbig{width: 400px;height: 30px;font-size: 22px;border: 1px solid black;text-align: center;vertical-align:middle;}
 .tdbold{background-color: blue;color: white;height: 30px;border: 1px solid black;text-align: center;vertical-align:middle;}
 #exposure2-preference {margin-right: 15x;}
 
