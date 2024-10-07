@@ -59,7 +59,7 @@ min-width: 600px;
   .radio-group .rd {
     display: flex;
     align-items: center;
-    margin-right: 35px;
+    
   }
 
   .radio-group .rd input {
@@ -78,7 +78,6 @@ min-width: 600px;
     align-items: center;
    border: 1px solid black;
    max-width: 710px;
-   height:40px;
-   margin-right: 10px;  
+   height:40px;  
   }
-.radio-all {margin-right:25px;}
+.radio-all {margin-right:35px;}
