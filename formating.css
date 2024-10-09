@@ -55,7 +55,7 @@ min-width: 600px;
  .rdb1{margin-right: 15px;}
  .radio-group {margin-right:35px; margin-bottom: 15px;}
   
-  .radio-group .rd {
+  /*.radio-group .rd {
     display: flex;
     align-items: center;
     
@@ -69,7 +69,7 @@ min-width: 600px;
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
-  }
+  } */
 
   .radio-group {
    display: flex;
