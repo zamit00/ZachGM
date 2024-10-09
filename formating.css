@@ -73,7 +73,7 @@ min-width: 600px;
 
   .radio-group {
    display: flex;
-    flex-wrap: wrap;
+  justify-content: space-evenly;
     align-items: center;
    border: 1px solid black;
    width: 710px;
