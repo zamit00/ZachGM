@@ -15,8 +15,9 @@
 .muzar {margin: 15px;}
 #product{border: 1px solid black;margin-right: 37px;height: 50px;width: 350px;vertical-align:middle;text-align:center;font-size:25px;}
 #management-type{ border: 1px solid black; margin-right: 10px;height: 50px;
-                 width: 180px;vertical-align:middle;text-align:center;font-size:25px;disbled: true;}
-
+                 width: 180px;vertical-align:middle;text-align:center;font-size:25px;disbled: true;
+                display: none;}
+#sugnihul{display: none;}
 #sugnihul,#lblproduct, #lblmaslul {margin-right: 15px;font-size:25px;height: 50px;}
 #exposure2-preference{margin-right: 20px;}
 #maslul-type {
