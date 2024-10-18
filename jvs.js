@@ -150,9 +150,9 @@ document.getElementById("tx1").value=0;
 
 function hishuv(x,y,z,t){
     let hishuv = x + y;
-    hishuv=hishuv * (1+z);
-    for (let i = 1; i < t; i++) {
-        hishuv = (hishuv+y) * (1+z);
+    hishuv=hishuv * (1+z/12);
+    for (let i = 1; i < t*12; i++) {
+        hishuv = (hishuv+y) * (1+z/12);
     }
     //hishuv= part(hishuv)
     return hishuv;
