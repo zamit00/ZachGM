@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="stylesheet.css" rel="stylesheet">
+    
+    <title>שאלון סיכון השקעות</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+        }
+    </style>
+</head>
+<body dir="rtl">
+
+    <h1>שאלון סיכון השקעות</h1>
+
+    <form id="riskForm" class="riskform">
+        <div class="question">
+            <label class="p">1. כמה ניסיון יש לך בשוק<br> ההשקעות?</label>
+            <label class="q"><input type="radio" name="q1" value="low"> אין ניסיון</label>
+            <label class="q"><input type="radio" name="q1" value="medium" > ניסיון מועט</label>
+            <label class="q"><input type="radio" name="q1" value="high"> ניסיון רב</label>
+        </div>
+
+        <div class="question">
+            <label class="p">2. כיצד היית מתאר את<br> הסובלנות  שלך להפסדים?</label>
+            <label class="q"><input type="radio" name="q2" value="low"> לא מוכן לספוג הפסדים</label>
+            <label class="q"><input type="radio" name="q2" value="medium"> מוכן להפסיד מעט</label>
+            <label class="q"><input type="radio" name="q2" value="high"> מוכן להפסיד באופן ניכר</label>
+        </div>
+
+        <div class="question">
+            <label class="p">3. מהו טווח ההשקעה שלך?</label>
+            <label class="q"><input type="radio" name="q3" value="low"> קצר טווח (עד שנה)</label>
+            <label class="q"><input type="radio" name="q3" value="medium"> בינוני טווח (1-5 שנים)</label>
+            <label class="q"><input type="radio" name="q3" value="high"> ארוך טווח (5 שנים ומעלה)</label>
+        </div>
+
+        <div class="question">
+            <label class="p">4. איך תרגיש אם ערך ההשקעה <br>שלך ירד ב-20%?</label>
+            <label class="q"><input type="radio" name="q4" value="low"> אני אפחד ואמכור את ההשקעה</label>
+            <label class="q"><input type="radio" name="q4" value="medium"> אני אדאג, אבל אמשיך להחזיק</label>
+            <label class="q"><input type="radio" name="q4" value="high"> אני אבין שזה חלק מההשקעה לטווח הארוך</label>
+        </div>
+
+        <div class="question">
+            <label class="p">5. עד כמה חשוב לך נזילות<br> בהשקעות שלך?</label>
+            <label class="q"><input type="radio" name="q5" value="low"> חשוב לי מאוד נזילות</label>
+            <label class="q"><input type="radio" name="q5" value="medium"> נזילות חשובה אך לא קריטית</label>
+            <label class="q"><input type="radio" name="q5" value="high"> לא אכפת לי מנזילות</label>
+        </div>
+
+        <div class="question">
+            <label class="p">6. האם תעדיף השקעה בסיכון גבוה<br> עם פוטנציאל תשואה גבוה או<br> השקעה בטוחה עם תשואה נמוכה?</label>
+            <label class="q"><input type="radio" name="q6" value="low"> אני מעדיף השקעה בטוחה</label>
+            <label class="q"><input type="radio" name="q6" value="medium"> אני מוכן לקחת סיכון בינוני</label>
+            <label class="q"><input type="radio" name="q6" value="high"> אני מחפש השקעות עם פוטנציאל תשואה גבוה</label>
+        </div>
+        <div class="buttonsrisk">
+            <button class="btnrisk" type="button" onclick="calculateRisk()">הערכת סיכון</button>
+        </div>
+
+        
+    </form>
+    <div class="resultmess">
+        <p id="result" class="result" style="display: none;"></p>
+    </div>
+
+    <div class="iframposition">
+        <div class="iframe" id="iframe" style="visibility: hidden;"> 
+            <iframe id="myIframe" src="index.html" width="0" height="0"></iframe>
+        </div>
+</div>
+
+    <script>
+        function calculateRisk() {
+            let riskScore = 0;
+            let check=0;
+            const form = document.forms['riskForm'];
+            const questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6'];
+           
+            questions.forEach(q => {
+                const answer = form[q].value;
+                if (check === 1){;return;}
+                if (answer === ''){alert("נדרש למלא את כל השאלון");check=1;return;}
+                if (answer === 'low') riskScore += 1;
+                else if (answer === 'medium') riskScore += 2;
+                else if (answer === 'high') riskScore += 3;
+            });
+
+
+              
+            let message =riskScore;
+            const iframe = document.getElementById('myIframe');
+
+            let riskLevel = '';
+
+            if (check === 0){
+                if (riskScore <= 8){message= 'נמוך';} 
+                else if (riskScore <= 12) {message = 'בינוני';}
+                else {message = 'גבוה';}
+                
+                document.getElementById("result").innerHTML =  'סיכון ' + message;
+                document.getElementById("result").style.display="block"; 
+                document.getElementById("result").style.fontSize = "25px";
+                localStorage.setItem('savedMessage', message);
+                iframe.contentWindow.postMessage(message, '*');
+            
+            }
+        }
+
+        window.addEventListener('message', (event) => {
+            console.log("ok");
+            const form = document.getElementById('riskForm');
+            const radioGroups = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6']; // Add all your question names here
+
+            radioGroups.forEach(group => {
+                const radios = form.querySelectorAll(`input[name="${group}"]`);
+                radios.forEach(radio => {
+                    radio.checked = false; // Uncheck each radio button
+                });
+            });
+            document.getElementById("result").style.display="none";
+        });
+        
+
+
+
+    </script>
+
+</body>
+</html>
